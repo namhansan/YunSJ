@@ -1,8 +1,8 @@
 {
-  "enabled": false,
-  "title": "",
+  "enabled": true,
+  "title": "축제 강의 1",
   "title_en": "",
-  "description": "",
+  "description": "오늘은 축제 1강이 시작됩니다",
   "description_en": "",
   "youtube_url": ""
 }
