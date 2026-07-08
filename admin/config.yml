@@ -17,6 +17,8 @@ collections:
           - { label: "이름 (한자, 선택)", name: "name_hanja", widget: "string", required: false }
           - { label: "이름 (영문, 선택)", name: "name_en", widget: "string", required: false }
           - { label: "닉네임 (예: 몽감독, 선택)", name: "nickname", widget: "string", required: false }
+          - { label: "로고 아래 소개 문구 (한글, 예: 축제총감독 · 문화기획가)", name: "logo_subtitle", widget: "string" }
+          - { label: "로고 아래 소개 문구 (영문, 선택)", name: "logo_subtitle_en", widget: "string", required: false }
           - { label: "푸터에 표시할 영문 이름 (예: Yun Seongjin)", name: "name_footer", widget: "string" }
           - { label: "메인 문구 (한글)", name: "tagline", widget: "string" }
           - { label: "메인 문구 (영문, 선택 — 비우면 한글이 표시됩니다)", name: "tagline_en", widget: "string", required: false }

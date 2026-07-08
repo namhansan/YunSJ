@@ -171,12 +171,11 @@ async function renderBrands() {
 async function renderHome() {
   const site = await fetchJSON("content/site.json");
   if (site) {
-    document.querySelectorAll("[data-name]").forEach(el => el.textContent = site.name_kr || "");
+    applySiteBasics(site);
     document.querySelectorAll("[data-tagline]").forEach(el => el.textContent = tf(site, "tagline"));
     document.querySelectorAll("[data-intro]").forEach(el => el.textContent = tf(site, "intro"));
     document.querySelectorAll("[data-phone]").forEach(el => el.textContent = site.phone || "");
     document.querySelectorAll("[data-email]").forEach(el => el.textContent = site.email || "");
-    document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
     const photoEl = document.querySelector("[data-photo]");
     if (photoEl && site.profile_photo) photoEl.innerHTML = `<img src="${site.profile_photo}" alt="${escapeHtml(site.name_kr)}">`;
     const titlesEl = document.querySelector("[data-titles]");

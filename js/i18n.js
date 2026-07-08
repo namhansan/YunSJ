@@ -142,6 +142,19 @@ function initLangToggle() {
   });
 }
 
+function siteDisplayName(site) {
+  if (!site) return "";
+  if (getLang() === "en" && site.name_en) return site.name_en;
+  return site.name_kr || "";
+}
+
+function applySiteBasics(site) {
+  if (!site) return;
+  document.querySelectorAll("[data-name]").forEach(el => el.textContent = siteDisplayName(site));
+  document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
+  document.querySelectorAll("[data-logo-subtitle]").forEach(el => el.textContent = tf(site, "logo_subtitle"));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   applyStaticI18n();
   initLangToggle();

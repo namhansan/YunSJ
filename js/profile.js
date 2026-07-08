@@ -22,8 +22,7 @@ function awardBlock(items) {
 async function renderProfile() {
   const site = await fetchJSON("content/site.json");
   if (site) {
-    document.querySelectorAll("[data-name]").forEach(el => el.textContent = site.name_kr || "");
-    document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
+    applySiteBasics(site);
     const photoEl = document.querySelector("[data-photo]");
     if (photoEl && site.profile_photo) photoEl.innerHTML = `<img src="${site.profile_photo}" alt="${escapeHtml(site.name_kr)}">`;
   }

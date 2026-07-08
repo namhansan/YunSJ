@@ -16,8 +16,7 @@ function renderGrid() {
 async function renderProjectsPage() {
   const site = await fetchJSON("content/site.json");
   if (site) {
-    document.querySelectorAll("[data-name]").forEach(el => el.textContent = site.name_kr || "");
-    document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
+    applySiteBasics(site);
   }
 
   const data = await fetchJSON("content/projects.json");

@@ -413,7 +413,7 @@ img { max-width: 100%; display: block; }
 }
 .banner-text h2 a { color: #fff; text-decoration: none; }
 .banner-text h2 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
-.banner-meta { color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.banner-meta { color: var(--accent); font-size: 15px; font-weight: 700; letter-spacing: 0.01em; margin-bottom: 6px; }
 .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
 .carousel-dots .dot {
   width: 7px; height: 7px; border-radius: 50%; background: var(--line); cursor: pointer;
