@@ -27,6 +27,25 @@ collections:
           - { label: "프로필 사진", name: "profile_photo", widget: "image", required: false }
           - { label: "전화번호", name: "phone", widget: "string" }
           - { label: "이메일", name: "email", widget: "string" }
+          - label: "SNS / 개인 채널 링크 (오른쪽에 세로로 표시됩니다)"
+            name: "socials"
+            widget: "list"
+            required: false
+            summary: "{{fields.platform}}"
+            fields:
+              - label: "채널"
+                name: "platform"
+                widget: "select"
+                options:
+                  - { label: "인스타그램", value: "instagram" }
+                  - { label: "페이스북", value: "facebook" }
+                  - { label: "유튜브", value: "youtube" }
+                  - { label: "블로그", value: "blog" }
+                  - { label: "스레드", value: "threads" }
+                  - { label: "X (트위터)", value: "x" }
+                  - { label: "링크드인", value: "linkedin" }
+                  - { label: "카카오채널", value: "kakao" }
+              - { label: "주소 (URL)", name: "url", widget: "string" }
           - label: "타이틀 뱃지 (예: 축제전문가)"
             name: "titles"
             widget: "list"

@@ -148,11 +148,33 @@ function siteDisplayName(site) {
   return site.name_kr || "";
 }
 
+const SOCIAL_ICONS = {
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.3-1.5 1.6-1.5H16.5V4.3C16.1 4.2 15 4 13.7 4 11 4 9.2 5.6 9.2 8.2v2.3H6.7v3h2.5V21h4.3z"/></svg>',
+  youtube: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.2-.4-4.7c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.5c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.5c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.7.4-4.7zM10 15.2V8.8l5.5 3.2L10 15.2z"/></svg>',
+  blog: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/><path d="M8 13h8M8 17h5"/></svg>',
+  threads: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c5 0 8 3 8 8.5S17 21 12 21c-4 0-7-2-7-5.5 0-3 2.3-4.5 6-4.5 2.4 0 4 .8 4 2.4 0 1.3-1 2.1-2.5 2.1-1 0-1.6-.4-1.6-1.1"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3l7.5 9L3.5 21h2.4l6.1-7.1L17 21H21l-7.8-9.6L20.5 3h-2.4l-5.6 6.5L7 3H3z"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1s2.48 1.1 2.48 2.5zM.5 8h4V23h-4V8zm7 0h3.8v2.1h.05c.5-.95 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6V23h-4v-6.7c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V23h-4V8z"/></svg>',
+  kakao: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.8-.2.7-.8 2.7-.9 3.1 0 0-.1.4.2.5.3.1.6-.1.6-.1 1-.6 3.3-2.2 3.9-2.6.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>',
+  default: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg>'
+};
+
+function renderSocialBar(site) {
+  const el = document.querySelector("[data-social-bar]");
+  if (!el || !site || !site.socials || !site.socials.length) return;
+  el.innerHTML = site.socials.filter(s => s.url).map(s => {
+    const icon = SOCIAL_ICONS[s.platform] || SOCIAL_ICONS.default;
+    return `<a href="${s.url}" target="_blank" rel="noopener" aria-label="${s.platform}">${icon}</a>`;
+  }).join("");
+}
+
 function applySiteBasics(site) {
   if (!site) return;
   document.querySelectorAll("[data-name]").forEach(el => el.textContent = siteDisplayName(site));
   document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
   document.querySelectorAll("[data-logo-subtitle]").forEach(el => el.textContent = tf(site, "logo_subtitle"));
+  renderSocialBar(site);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
