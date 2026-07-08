@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>프로젝트 상세 | 윤성진</title>
+<title>행사 | 윤성진</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,7 +22,7 @@
       <a href="index.html" data-i18n="nav_home">홈</a>
       <a href="profile.html" data-i18n="nav_profile">프로필</a>
       <a href="projects.html" data-i18n="nav_projects">프로젝트</a>
-      <a href="events.html" data-i18n="nav_events">행사</a>
+      <a href="events.html" data-i18n="nav_events" class="active">행사</a>
       <a href="media.html" data-i18n="nav_media">미디어</a>
       <a href="index.html#contact" data-i18n="nav_contact">연락처</a>
       <div class="lang-toggle">
@@ -34,9 +34,16 @@
   </div>
 </header>
 
-<section class="detail-hero">
-  <div class="wrap" data-project-detail>
-    <div class="empty-state" data-i18n="loading">불러오는 중…</div>
+<section class="section" style="padding-top:60px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="events_eyebrow">NOW ON</div>
+      <h2 class="section-title" data-events-title>진행중인 행사</h2>
+      <p class="section-desc" data-i18n="events_page_desc">현재 진행 중이거나 곧 열리는 행사들을 소개합니다.</p>
+    </div>
+    <div class="project-grid" data-events-grid>
+      <div class="empty-state" data-i18n="loading">불러오는 중…</div>
+    </div>
   </div>
 </section>
 
@@ -47,7 +54,7 @@
 <script src="js/common.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/home.js"></script>
-<script src="js/project-detail.js"></script>
+<script src="js/events.js"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

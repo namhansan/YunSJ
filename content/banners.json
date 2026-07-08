@@ -14,7 +14,12 @@
       "description_en": "Seoul's flagship summer festival held across the Hangang River parks, featuring on-water performances, a night market, and family programs.",
       "link": "",
       "link_text": "자세히 보기",
-      "link_text_en": "Learn more"
+      "link_text_en": "Learn more",
+      "slug": "hangang-mongttang-2026",
+      "body": "",
+      "body_en": "",
+      "gallery": [],
+      "report_file": ""
     },
     {
       "enabled": true,
@@ -28,7 +33,12 @@
       "description_en": "A rural specialty festival featuring seasonal tomato harvesting experiences, a tomato food market, and children's programs.",
       "link": "",
       "link_text": "자세히 보기",
-      "link_text_en": "Learn more"
+      "link_text_en": "Learn more",
+      "slug": "tomato-festival-2026",
+      "body": "",
+      "body_en": "",
+      "gallery": [],
+      "report_file": ""
     },
     {
       "enabled": true,
@@ -42,7 +52,12 @@
       "description_en": "A culinary festival bringing together popular food trucks from across the country, with live performances and an outdoor dining zone.",
       "link": "",
       "link_text": "자세히 보기",
-      "link_text_en": "Learn more"
+      "link_text_en": "Learn more",
+      "slug": "food-truck-festival-2026",
+      "body": "",
+      "body_en": "",
+      "gallery": [],
+      "report_file": ""
     }
   ]
 }

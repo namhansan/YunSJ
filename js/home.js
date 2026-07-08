@@ -61,23 +61,25 @@ async function renderLive() {
 let BANNER_ITEMS = [];
 let BANNER_INDEX = 0;
 
+function eventLink(e) {
+  if (e.link) return { href: e.link, target: "_blank", rel: 'rel="noopener"' };
+  return { href: `event.html?id=${encodeURIComponent(e.slug)}`, target: "_self", rel: "" };
+}
+
 function eventCardHTML(e) {
   const img = e.image ? `<img src="${e.image}" alt="${escapeHtml(tf(e, "title"))}">` : "";
   const loc = tf(e, "location");
-  const link = e.link
-    ? `<a class="btn outline small" style="margin-top:14px;" href="${e.link}">${escapeHtml(tf(e, "link_text") || t("banner_default_link"))}</a>`
-    : "";
+  const { href, target, rel } = eventLink(e);
   return `
-    <div class="project-card">
+    <a class="project-card" href="${href}" target="${target}" ${rel}>
       <div class="thumb">${img}</div>
       <div class="body">
         <div class="cat-row">${loc ? `<span class="brand-tag">${escapeHtml(loc)}</span>` : ""}</div>
         <h3>${escapeHtml(tf(e, "title"))}</h3>
         <div class="meta">${escapeHtml(e.period || "")}</div>
         ${tf(e, "description") ? `<p style="font-size:14px;color:var(--navy-soft);margin:10px 0 0;">${escapeHtml(tf(e, "description"))}</p>` : ""}
-        ${link}
       </div>
-    </div>`;
+    </a>`;
 }
 
 function renderBannerFrame() {
@@ -85,9 +87,8 @@ function renderBannerFrame() {
   if (!el || !BANNER_ITEMS.length) return;
   const b = BANNER_ITEMS[BANNER_INDEX];
   const img = b.image ? `<div class="banner-photo"><img src="${b.image}" alt=""></div>` : "";
-  const link = b.link
-    ? `<a class="btn" href="${b.link}">${escapeHtml(tf(b, "link_text") || t("banner_default_link"))}</a>`
-    : "";
+  const bLink = eventLink(b);
+  const link = `<a class="btn" href="${bLink.href}" target="${bLink.target}" ${bLink.rel}>${escapeHtml(tf(b, "link_text") || t("banner_default_link"))}</a>`;
   const arrows = BANNER_ITEMS.length > 1
     ? `<button class="carousel-arrow prev" data-dir="-1" aria-label="prev">‹</button>
        <button class="carousel-arrow next" data-dir="1" aria-label="next">›</button>`

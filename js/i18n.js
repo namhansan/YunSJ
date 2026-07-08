@@ -46,7 +46,11 @@ const UI_STRINGS = {
     empty_media: "곧 자료가 채워질 예정입니다.",
     live_badge: "LIVE", live_watch: "지금 시청하기 →",
     events_eyebrow: "NOW ON", events_title_fallback: "진행중인 행사",
-    empty_events: "현재 진행 중인 행사가 없습니다."
+    empty_events: "현재 진행 중인 행사가 없습니다.",
+    nav_events: "행사",
+    events_page_desc: "현재 진행 중이거나 곧 열리는 행사들을 소개합니다.",
+    back_to_events: "← 전체 행사로 돌아가기",
+    event_not_found: "행사를 찾을 수 없습니다."
   },
   en: {
     nav_home: "Home", nav_profile: "Profile", nav_projects: "Projects", nav_contact: "Contact",
@@ -83,7 +87,11 @@ const UI_STRINGS = {
     empty_media: "Content coming soon.",
     live_badge: "LIVE", live_watch: "Watch now →",
     events_eyebrow: "NOW ON", events_title_fallback: "Ongoing Events",
-    empty_events: "No ongoing events right now."
+    empty_events: "No ongoing events right now.",
+    nav_events: "Events",
+    events_page_desc: "Events that are currently underway or coming up soon.",
+    back_to_events: "← Back to all events",
+    event_not_found: "Event not found."
   }
 };
 

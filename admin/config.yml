@@ -146,15 +146,24 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "홈 배너/목록에 노출", name: "enabled", widget: "boolean", default: true }
-              - { label: "사진", name: "image", widget: "image", required: false }
+              - { label: "사진 (대표 사진)", name: "image", widget: "image", required: false }
               - { label: "행사명 (한글)", name: "title", widget: "string" }
               - { label: "행사명 (영문, 선택)", name: "title_en", widget: "string", required: false }
+              - { label: "고유 주소 (영문/숫자, 공백없이. 예: hangang-festival-2026)", name: "slug", widget: "string", hint: "행사 상세 페이지 링크 주소로 쓰입니다. 다른 행사와 겹치지 않게 만들어주세요." }
               - { label: "장소 (선택)", name: "location", widget: "string", required: false }
               - { label: "장소 (영문, 선택)", name: "location_en", widget: "string", required: false }
               - { label: "기간 (예: 2026.07.10~08.10, 선택)", name: "period", widget: "string", required: false }
-              - { label: "설명 (한글)", name: "description", widget: "text", required: false }
-              - { label: "설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
-              - { label: "링크 (외부 주소 또는 project.html?id=슬러그, 선택)", name: "link", widget: "string", required: false }
+              - { label: "한 줄 요약 (한글)", name: "description", widget: "text", required: false }
+              - { label: "한 줄 요약 (영문, 선택)", name: "description_en", widget: "text", required: false }
+              - { label: "상세 내용 (한글, 선택 — 자체 상세 페이지 본문으로 쓰입니다)", name: "body", widget: "text", required: false }
+              - { label: "상세 내용 (영문, 선택)", name: "body_en", widget: "text", required: false }
+              - label: "사진 갤러리 (여러 장 가능, 선택)"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "사진", name: "photo", widget: "image" }
+              - { label: "관련 자료 PDF (선택)", name: "report_file", widget: "file", required: false }
+              - { label: "외부 링크 (있으면 이 주소로 연결되고, 없으면 자동으로 자체 상세 페이지가 만들어집니다)", name: "link", widget: "string", required: false }
               - { label: "버튼 문구 (한글)", name: "link_text", widget: "string", required: false }
               - { label: "버튼 문구 (영문, 선택)", name: "link_text_en", widget: "string", required: false }
 
