@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로필 | 윤성진(몽감독)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand"><span data-name>윤성진</span><span class="nickname" data-nickname>(몽감독)</span></div>
+    <nav class="nav">
+      <a href="index.html">홈</a>
+      <a href="profile.html" class="active">프로필</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="index.html#contact">연락처</a>
+    </nav>
+    <button class="nav-toggle" aria-label="메뉴">☰</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:60px 0 50px;">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Profile</div>
+      <h1 style="font-size:clamp(28px,4vw,42px);">프로필</h1>
+      <p class="lead" data-intro-long style="white-space:pre-line;"></p>
+    </div>
+    <div class="hero-photo" data-photo></div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="wrap" data-career-sections>
+    <div class="empty-state">불러오는 중…</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">© <span id="year"></span> <span data-name>윤성진</span>. All rights reserved.</div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/profile.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
