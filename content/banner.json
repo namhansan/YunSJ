@@ -1,11 +1,11 @@
 {
-  "enabled": false,
-  "image": "",
-  "title": "",
-  "title_en": "",
-  "description": "",
+  "enabled": true,
   "description_en": "",
-  "link": "",
+  "title_en": "",
   "link_text": "자세히 보기",
-  "link_text_en": "Learn more"
+  "link_text_en": "Learn more",
+  "title": "축제를 합니다",
+  "link": "",
+  "image": "/images/uploads/kakaotalk_photo_2026-07-02-15-59-53.jpeg",
+  "description": ""
 }
