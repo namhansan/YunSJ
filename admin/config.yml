@@ -16,16 +16,22 @@ collections:
           - { label: "이름 (한글)", name: "name_kr", widget: "string" }
           - { label: "이름 (한자, 선택)", name: "name_hanja", widget: "string", required: false }
           - { label: "이름 (영문, 선택)", name: "name_en", widget: "string", required: false }
-          - { label: "닉네임 (예: 몽감독)", name: "nickname", widget: "string", required: false }
-          - { label: "메인 문구 (홈 화면 큰 제목)", name: "tagline", widget: "string" }
-          - { label: "소개 요약 (홈 화면, 2~3줄 권장)", name: "intro", widget: "text" }
-          - { label: "프로필 사진 (홈/프로필 공용)", name: "profile_photo", widget: "image", required: false }
+          - { label: "닉네임 (예: 몽감독, 선택)", name: "nickname", widget: "string", required: false }
+          - { label: "푸터에 표시할 영문 이름 (예: Yun Seongjin)", name: "name_footer", widget: "string" }
+          - { label: "메인 문구 (한글)", name: "tagline", widget: "string" }
+          - { label: "메인 문구 (영문, 선택 — 비우면 한글이 표시됩니다)", name: "tagline_en", widget: "string", required: false }
+          - { label: "소개 요약 (한글)", name: "intro", widget: "text" }
+          - { label: "소개 요약 (영문, 선택)", name: "intro_en", widget: "text", required: false }
+          - { label: "프로필 사진", name: "profile_photo", widget: "image", required: false }
           - { label: "전화번호", name: "phone", widget: "string" }
           - { label: "이메일", name: "email", widget: "string" }
-          - label: "타이틀 뱃지 (예: 축제전문가, 문화기획가)"
+          - label: "타이틀 뱃지 (예: 축제전문가)"
             name: "titles"
             widget: "list"
-            field: { label: "타이틀", name: "title", widget: "string" }
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "한글", name: "label", widget: "string" }
+              - { label: "영문 (선택)", name: "label_en", widget: "string", required: false }
 
   - name: "profile"
     label: "상세 프로필"
@@ -34,50 +40,132 @@ collections:
         label: "프로필 페이지 수정"
         file: "content/profile.json"
         fields:
-          - { label: "소개글 (프로필 페이지 상단, 줄바꿈은 Enter 두 번)", name: "intro_long", widget: "text" }
+          - { label: "소개글 (한글)", name: "intro_long", widget: "text" }
+          - { label: "소개글 (영문, 선택)", name: "intro_long_en", widget: "text", required: false }
           - label: "학력"
             name: "education"
             widget: "list"
             summary: "{{fields.school}}"
             fields:
               - { label: "기간 (선택)", name: "period", widget: "string", required: false }
-              - { label: "학교/전공", name: "school", widget: "string" }
-              - { label: "비고 (논문 제목 등, 선택)", name: "note", widget: "string", required: false }
+              - { label: "학교/전공 (한글)", name: "school", widget: "string" }
+              - { label: "학교/전공 (영문, 선택)", name: "school_en", widget: "string", required: false }
+              - { label: "비고 (한글, 선택)", name: "note", widget: "string", required: false }
+              - { label: "비고 (영문, 선택)", name: "note_en", widget: "string", required: false }
           - label: "현직"
             name: "current_positions"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "축제 총감독 이력"
             name: "festival_director"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "행사 연출 이력"
             name: "event_direction"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "축제개발 컨설팅 · 연구"
             name: "consulting_research"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "축제 평가 위원 이력"
             name: "festival_evaluation"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "축제학교 / 인력양성"
             name: "school_activities"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "대학 · 대학원 강의"
             name: "lectures"
             widget: "list"
-            field: { label: "내용", name: "title", widget: "string" }
+            summary: "{{fields.content}}"
+            fields:
+              - { label: "내용 (한글)", name: "content", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
           - label: "수상 내역"
             name: "awards"
             widget: "list"
             summary: "{{fields.year}} — {{fields.title}}"
             fields:
               - { label: "연도", name: "year", widget: "string" }
-              - { label: "내용", name: "title", widget: "string" }
+              - { label: "내용 (한글)", name: "title", widget: "string" }
+              - { label: "내용 (영문, 선택)", name: "title_en", widget: "string", required: false }
+
+  - name: "brands"
+    label: "사업 브랜드"
+    files:
+      - name: "brands"
+        label: "사업 브랜드 목록 수정"
+        file: "content/brands.json"
+        fields:
+          - label: "브랜드 (계속 추가 가능)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "브랜드명 (한글, 예: ㈜파이브스톤)", name: "name", widget: "string" }
+              - { label: "브랜드명 (영문, 선택)", name: "name_en", widget: "string", required: false }
+              - { label: "한 줄 소개 (한글, 선택)", name: "tagline", widget: "string", required: false }
+              - { label: "한 줄 소개 (영문, 선택)", name: "tagline_en", widget: "string", required: false }
+              - { label: "상세 설명 (한글)", name: "description", widget: "text", required: false }
+              - { label: "상세 설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
+              - { label: "로고 이미지 (선택)", name: "logo", widget: "image", required: false }
+              - { label: "브랜드 자체 홈페이지 링크 (있는 경우만)", name: "url", widget: "string", required: false }
+
+  - name: "banner"
+    label: "홈 배너 (진행중 축제 소개)"
+    files:
+      - name: "banner"
+        label: "배너 수정"
+        file: "content/banner.json"
+        fields:
+          - { label: "배너 표시 여부", name: "enabled", widget: "boolean", default: false }
+          - { label: "사진", name: "image", widget: "image", required: false }
+          - { label: "제목 (한글)", name: "title", widget: "string", required: false }
+          - { label: "제목 (영문, 선택)", name: "title_en", widget: "string", required: false }
+          - { label: "설명 (한글)", name: "description", widget: "text", required: false }
+          - { label: "설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
+          - { label: "링크 (외부 주소 또는 project.html?id=슬러그)", name: "link", widget: "string", required: false }
+          - { label: "버튼 문구 (한글)", name: "link_text", widget: "string", required: false }
+          - { label: "버튼 문구 (영문, 선택)", name: "link_text_en", widget: "string", required: false }
+
+  - name: "popup"
+    label: "팝업 공지"
+    files:
+      - name: "popup"
+        label: "팝업 수정"
+        file: "content/popup.json"
+        fields:
+          - { label: "팝업 사용 여부", name: "enabled", widget: "boolean", default: false }
+          - { label: "제목 (한글)", name: "title", widget: "string", required: false }
+          - { label: "제목 (영문, 선택)", name: "title_en", widget: "string", required: false }
+          - { label: "이미지 (선택)", name: "image", widget: "image", required: false }
+          - { label: "내용 (한글)", name: "content", widget: "text", required: false }
+          - { label: "내용 (영문, 선택)", name: "content_en", widget: "text", required: false }
+          - { label: "버튼 링크 (선택)", name: "link", widget: "string", required: false }
+          - { label: "버튼 문구 (한글)", name: "link_text", widget: "string", required: false }
+          - { label: "버튼 문구 (영문, 선택)", name: "link_text_en", widget: "string", required: false }
+          - { label: "게시 시작일 (선택)", name: "start_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, picker_utc: true }
+          - { label: "게시 종료일 (선택)", name: "end_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, picker_utc: true }
 
   - name: "projects"
     label: "프로젝트"
@@ -91,7 +179,8 @@ collections:
             widget: "list"
             summary: "{{fields.title}} — {{fields.period}}"
             fields:
-              - { label: "제목", name: "title", widget: "string" }
+              - { label: "제목 (한글)", name: "title", widget: "string" }
+              - { label: "제목 (영문, 선택)", name: "title_en", widget: "string", required: false }
               - { label: "고유 주소 (영문/숫자, 공백없이. 예: sejong-festival-2023)", name: "slug", widget: "string", hint: "프로젝트별 링크 주소로 쓰입니다. 다른 프로젝트와 겹치지 않게 만들어주세요." }
               - label: "카테고리"
                 name: "category"
@@ -101,11 +190,14 @@ collections:
                   - { label: "행사연출", value: "direction" }
                   - { label: "컨설팅·연구", value: "consulting" }
                   - { label: "강의·교육", value: "lecture" }
+              - { label: "소속 사업 브랜드 (선택, '사업 브랜드'에 등록한 이름과 똑같이 입력하면 자동 연결됩니다)", name: "brand", widget: "string", required: false }
               - { label: "기간 (예: 2022~2023)", name: "period", widget: "string", required: false }
               - { label: "주최/주관 기관 (선택)", name: "organizer", widget: "string", required: false }
-              - { label: "대표 사진 (목록/카드에 표시)", name: "cover", widget: "image", required: false }
-              - { label: "한 줄 요약", name: "summary", widget: "text", required: false }
-              - { label: "상세 설명", name: "description", widget: "text", required: false }
+              - { label: "대표 사진", name: "cover", widget: "image", required: false }
+              - { label: "한 줄 요약 (한글)", name: "summary", widget: "text", required: false }
+              - { label: "한 줄 요약 (영문, 선택)", name: "summary_en", widget: "text", required: false }
+              - { label: "상세 설명 (한글)", name: "description", widget: "text", required: false }
+              - { label: "상세 설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
               - label: "사진 갤러리 (여러 장 가능)"
                 name: "gallery"
                 widget: "list"

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>프로젝트 상세 | 윤성진(몽감독)</title>
+<title>프로젝트 상세 | 윤성진</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,12 +11,22 @@
 
 <header class="site-header">
   <div class="wrap">
-    <div class="brand"><span data-name>윤성진</span><span class="nickname" data-nickname>(몽감독)</span></div>
+    <a class="brand-link" href="index.html">
+      <div class="brand-mark">윤</div>
+      <div class="brand-lockup">
+        <span class="brand-full" data-name>윤성진</span>
+        <span class="brand-sub" data-i18n="hero_eyebrow">축제총감독 · 문화기획가</span>
+      </div>
+    </a>
     <nav class="nav">
-      <a href="index.html">홈</a>
-      <a href="profile.html">프로필</a>
-      <a href="projects.html">프로젝트</a>
-      <a href="index.html#contact">연락처</a>
+      <a href="index.html" data-i18n="nav_home">홈</a>
+      <a href="profile.html" data-i18n="nav_profile">프로필</a>
+      <a href="projects.html" data-i18n="nav_projects">프로젝트</a>
+      <a href="index.html#contact" data-i18n="nav_contact">연락처</a>
+      <div class="lang-toggle">
+        <button data-lang-btn="ko">KO</button>
+        <button data-lang-btn="en">EN</button>
+      </div>
     </nav>
     <button class="nav-toggle" aria-label="메뉴">☰</button>
   </div>
@@ -24,15 +34,16 @@
 
 <section class="detail-hero">
   <div class="wrap" data-project-detail>
-    <div class="empty-state">불러오는 중…</div>
+    <div class="empty-state" data-i18n="loading">불러오는 중…</div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="wrap">© <span id="year"></span> <span data-name>윤성진</span>. All rights reserved.</div>
+  <div class="wrap">© <span id="year"></span> <span data-footer-name style="text-transform:uppercase;">YUN SEONGJIN</span>. <span data-i18n="footer_rights">All rights reserved.</span></div>
 </footer>
 
 <script src="js/common.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/home.js"></script>
 <script src="js/project-detail.js"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>

@@ -245,3 +245,93 @@ img { max-width: 100%; display: block; }
 .report-link:hover { background: var(--navy); color: #fff; }
 
 .empty-state { color: var(--gray); padding: 40px 0; text-align: center; }
+
+/* ---- Brand mark / logo lockup ---- */
+.brand-link { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-weight: 700; font-size: 17px;
+  flex-shrink: 0;
+}
+.brand-lockup { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-lockup .brand-full {
+  font-family: var(--serif); font-weight: 700; font-size: 22px;
+  letter-spacing: 0.01em; color: var(--navy);
+}
+.brand-lockup .brand-sub {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; margin-top: 2px;
+}
+
+/* ---- Lang toggle ---- */
+.lang-toggle { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; margin-left: 8px; }
+.lang-toggle button {
+  border: none; background: #fff; padding: 6px 12px; font-size: 12px; font-weight: 700;
+  cursor: pointer; color: var(--gray); letter-spacing: 0.03em;
+}
+.lang-toggle button.active { background: var(--navy); color: #fff; }
+
+/* ---- Larger section titles ---- */
+.section-title { font-size: clamp(28px, 3.6vw, 40px); }
+
+/* ---- Category + brand tag row on cards ---- */
+.cat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.brand-tag {
+  font-size: 11px; font-weight: 700; color: var(--navy-soft);
+  background: var(--cream-deep); padding: 3px 10px; border-radius: 999px;
+}
+
+/* ---- Business brand cards ---- */
+.brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .brand-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .brand-grid { grid-template-columns: 1fr; } }
+.brand-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px; display: flex; flex-direction: column;
+}
+.brand-logo { height: 44px; display: flex; align-items: center; margin-bottom: 14px; }
+.brand-logo img { max-height: 44px; }
+.brand-card h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.brand-tagline { color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.brand-card p { color: var(--gray); font-size: 14px; margin: 0 0 18px; flex-grow: 1; }
+.brand-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn.small { padding: 8px 16px; font-size: 13px; }
+
+/* ---- Banner ---- */
+.banner-section { display: none; padding: 0 0 72px; border-bottom: 1px solid var(--line); }
+.banner-inner {
+  background: var(--navy); color: #fff; border-radius: 16px; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1.3fr; align-items: stretch;
+}
+@media (max-width: 720px) { .banner-inner { grid-template-columns: 1fr; } }
+.banner-photo { aspect-ratio: 4/3; overflow: hidden; }
+.banner-photo img { width: 100%; height: 100%; object-fit: cover; }
+.banner-text { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.banner-text .section-eyebrow { color: var(--accent); }
+.banner-text h2 { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); margin: 6px 0 14px; }
+.banner-text p { color: #cfd6e0; margin-bottom: 20px; }
+.banner-text .btn { background: var(--accent); align-self: flex-start; }
+.banner-text .btn:hover { background: #fff; color: var(--navy); }
+
+/* ---- Popup ---- */
+.popup-overlay {
+  position: fixed; inset: 0; background: rgba(27,36,48,0.55);
+  display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;
+}
+.popup-box {
+  background: #fff; border-radius: var(--radius); max-width: 420px; width: 100%;
+  overflow: hidden; position: relative;
+}
+.popup-box img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.popup-close {
+  position: absolute; top: 10px; right: 14px; background: none; border: none;
+  font-size: 26px; color: #fff; cursor: pointer; text-shadow: 0 1px 4px rgba(0,0,0,0.4); z-index: 2;
+}
+.popup-box img + .popup-close { color: #fff; }
+.popup-body { padding: 24px; }
+.popup-box:not(:has(img)) .popup-close { color: var(--navy); text-shadow: none; }
+.popup-body h3 { font-family: var(--serif); font-size: 19px; margin: 0 0 10px; }
+.popup-body p { color: var(--navy-soft); font-size: 14px; margin: 0 0 16px; white-space: pre-line; }
+.popup-dismiss { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gray); margin-top: 14px; }
