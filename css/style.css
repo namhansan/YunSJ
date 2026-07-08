@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
 .nav { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
 .nav a {
   position: relative; color: var(--navy-soft); transition: color .2s;
-  text-transform: uppercase; font-size: 14.5px; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; font-size: 16px; font-weight: 700; letter-spacing: 0.03em;
   padding-bottom: 5px;
 }
 .nav a::after {
@@ -262,20 +262,20 @@ img { max-width: 100%; display: block; }
 /* ---- Brand mark / logo lockup ---- */
 .brand-link { display: flex; align-items: center; gap: 12px; }
 .brand-mark {
-  width: 38px; height: 38px; border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   background: var(--navy); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif); font-weight: 700; font-size: 17px;
+  font-family: var(--sans); font-weight: 800; font-size: 17px;
   flex-shrink: 0;
 }
 .brand-lockup { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-lockup .brand-full {
-  font-family: var(--serif); font-weight: 700; font-size: 22px;
-  letter-spacing: 0.01em; color: var(--navy);
+  font-family: var(--sans); font-weight: 800; font-size: 19px;
+  letter-spacing: 0.02em; text-transform: uppercase; color: var(--navy);
 }
 .brand-lockup .brand-sub {
-  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--accent); font-weight: 700; margin-top: 2px;
+  font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; margin-top: 3px;
 }
 
 /* ---- Lang toggle ---- */
