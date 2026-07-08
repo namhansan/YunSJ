@@ -24,4 +24,19 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function extractYoutubeId(url) {
+  if (!url) return null;
+  const patterns = [
+    /youtu\.be\/([\w-]{6,})/,
+    /[?&]v=([\w-]{6,})/,
+    /youtube\.com\/live\/([\w-]{6,})/,
+    /youtube\.com\/embed\/([\w-]{6,})/
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return m[1];
+  }
+  return null;
+}
+
 document.addEventListener("DOMContentLoaded", initNav);

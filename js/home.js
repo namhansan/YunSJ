@@ -28,6 +28,32 @@ function brandCardHTML(b) {
     </div>`;
 }
 
+async function renderLive() {
+  const live = await fetchJSON("content/live.json");
+  const el = document.querySelector("[data-live]");
+  if (!el || !live || !live.enabled || !live.youtube_url) return;
+
+  const vid = extractYoutubeId(live.youtube_url);
+  const thumb = vid
+    ? `<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="">`
+    : "";
+
+  el.innerHTML = `
+    <div class="live-card">
+      <a class="live-thumb" href="${live.youtube_url}" target="_blank" rel="noopener">
+        ${thumb}
+        <span class="play-icon"><span class="play-icon-circle"></span></span>
+      </a>
+      <div class="live-body">
+        <span class="live-badge"><span class="live-dot"></span> ${t("live_badge")}</span>
+        <h3>${escapeHtml(tf(live, "title"))}</h3>
+        ${tf(live, "description") ? `<p>${escapeHtml(tf(live, "description"))}</p>` : ""}
+        <a class="btn small" style="align-self:flex-start;" href="${live.youtube_url}" target="_blank" rel="noopener">${t("live_watch")}</a>
+      </div>
+    </div>`;
+  el.closest("section").style.display = "block";
+}
+
 async function renderBanner() {
   const banner = await fetchJSON("content/banner.json");
   const el = document.querySelector("[data-banner]");
@@ -78,6 +104,7 @@ async function renderHome() {
     }
   }
 
+  await renderLive();
   await renderBanner();
   await renderBrands();
 

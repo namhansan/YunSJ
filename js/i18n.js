@@ -5,6 +5,11 @@ const CATEGORY_LABELS = {
   en: { director: "Festival Director", direction: "Event Direction", consulting: "Consulting & Research", lecture: "Lecture & Education" }
 };
 
+const MEDIA_TYPE_LABELS = {
+  ko: { press: "언론보도", interview: "인터뷰", book: "저서", report: "리포트" },
+  en: { press: "Press", interview: "Interview", book: "Publications", report: "Report" }
+};
+
 const UI_STRINGS = {
   ko: {
     nav_home: "홈", nav_profile: "프로필", nav_projects: "프로젝트", nav_contact: "연락처",
@@ -33,7 +38,13 @@ const UI_STRINGS = {
     sec_education: "학력", sec_current: "현직", sec_director: "축제 총감독",
     sec_direction: "행사 연출", sec_consulting: "축제개발 컨설팅 · 연구",
     sec_school: "축제학교", sec_lecture: "대학 · 대학원 강의",
-    sec_eval: "축제 평가", sec_awards: "수상 내역", empty_section: "등록된 내용이 없습니다."
+    sec_eval: "축제 평가", sec_awards: "수상 내역", empty_section: "등록된 내용이 없습니다.",
+    nav_media: "미디어",
+    media_eyebrow: "MEDIA & PUBLICATIONS", media_title: "언론·인터뷰·저서",
+    media_desc: "그동안 소개된 언론 보도, 인터뷰, 저서, 연구 리포트를 모아봤습니다.",
+    media_view_link: "원문 보기", media_view_file: "PDF 보기",
+    empty_media: "곧 자료가 채워질 예정입니다.",
+    live_badge: "LIVE", live_watch: "지금 시청하기 →"
   },
   en: {
     nav_home: "Home", nav_profile: "Profile", nav_projects: "Projects", nav_contact: "Contact",
@@ -62,7 +73,13 @@ const UI_STRINGS = {
     sec_education: "Education", sec_current: "Current Positions", sec_director: "Festival Direction",
     sec_direction: "Event Direction", sec_consulting: "Consulting & Research",
     sec_school: "Festival Schools", sec_lecture: "University Lectures",
-    sec_eval: "Festival Evaluation", sec_awards: "Awards", empty_section: "Nothing added yet."
+    sec_eval: "Festival Evaluation", sec_awards: "Awards", empty_section: "Nothing added yet.",
+    nav_media: "Media",
+    media_eyebrow: "MEDIA & PUBLICATIONS", media_title: "Press, Interviews & Publications",
+    media_desc: "A collection of press coverage, interviews, publications, and research reports.",
+    media_view_link: "View source", media_view_file: "View PDF",
+    empty_media: "Content coming soon.",
+    live_badge: "LIVE", live_watch: "Watch now →"
   }
 };
 
