@@ -44,7 +44,9 @@ const UI_STRINGS = {
     media_desc: "그동안 소개된 언론 보도, 인터뷰, 저서, 연구 리포트를 모아봤습니다.",
     media_view_link: "원문 보기", media_view_file: "PDF 보기",
     empty_media: "곧 자료가 채워질 예정입니다.",
-    live_badge: "LIVE", live_watch: "지금 시청하기 →"
+    live_badge: "LIVE", live_watch: "지금 시청하기 →",
+    events_eyebrow: "NOW ON", events_title_fallback: "진행중인 행사",
+    empty_events: "현재 진행 중인 행사가 없습니다."
   },
   en: {
     nav_home: "Home", nav_profile: "Profile", nav_projects: "Projects", nav_contact: "Contact",
@@ -79,7 +81,9 @@ const UI_STRINGS = {
     media_desc: "A collection of press coverage, interviews, publications, and research reports.",
     media_view_link: "View source", media_view_file: "View PDF",
     empty_media: "Content coming soon.",
-    live_badge: "LIVE", live_watch: "Watch now →"
+    live_badge: "LIVE", live_watch: "Watch now →",
+    events_eyebrow: "NOW ON", events_title_fallback: "Ongoing Events",
+    empty_events: "No ongoing events right now."
   }
 };
 

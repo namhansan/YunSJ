@@ -31,48 +31,128 @@ function brandCardHTML(b) {
 async function renderLive() {
   const live = await fetchJSON("content/live.json");
   const el = document.querySelector("[data-live]");
-  if (!el || !live || !live.enabled || !live.youtube_url) return;
+  if (!el || !live || !live.enabled) return;
 
   const vid = extractYoutubeId(live.youtube_url);
-  const thumb = vid
-    ? `<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="">`
+  const hasThumb = !!vid;
+  const thumb = hasThumb
+    ? `<a class="live-thumb" href="${live.youtube_url}" target="_blank" rel="noopener">
+         <img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="">
+         <span class="play-icon"><span class="play-icon-circle"></span></span>
+       </a>`
+    : "";
+  const watchBtn = live.youtube_url
+    ? `<a class="btn small" style="align-self:flex-start;" href="${live.youtube_url}" target="_blank" rel="noopener">${t("live_watch")}</a>`
     : "";
 
   el.innerHTML = `
-    <div class="live-card">
-      <a class="live-thumb" href="${live.youtube_url}" target="_blank" rel="noopener">
-        ${thumb}
-        <span class="play-icon"><span class="play-icon-circle"></span></span>
-      </a>
+    <div class="live-card${hasThumb ? "" : " no-thumb"}">
+      ${thumb}
       <div class="live-body">
         <span class="live-badge"><span class="live-dot"></span> ${t("live_badge")}</span>
         <h3>${escapeHtml(tf(live, "title"))}</h3>
         ${tf(live, "description") ? `<p>${escapeHtml(tf(live, "description"))}</p>` : ""}
-        <a class="btn small" style="align-self:flex-start;" href="${live.youtube_url}" target="_blank" rel="noopener">${t("live_watch")}</a>
+        ${watchBtn}
       </div>
     </div>`;
   el.closest("section").style.display = "block";
 }
 
-async function renderBanner() {
-  const banner = await fetchJSON("content/banner.json");
-  const el = document.querySelector("[data-banner]");
-  if (!el || !banner || !banner.enabled) return;
-  const img = banner.image ? `<div class="banner-photo"><img src="${banner.image}" alt=""></div>` : "";
-  const link = banner.link
-    ? `<a class="btn" href="${banner.link}">${escapeHtml(tf(banner, "link_text") || t("banner_default_link"))}</a>`
+let BANNER_ITEMS = [];
+let BANNER_INDEX = 0;
+
+function eventCardHTML(e) {
+  const img = e.image ? `<img src="${e.image}" alt="${escapeHtml(tf(e, "title"))}">` : "";
+  const loc = tf(e, "location");
+  const link = e.link
+    ? `<a class="btn outline small" style="margin-top:14px;" href="${e.link}">${escapeHtml(tf(e, "link_text") || t("banner_default_link"))}</a>`
     : "";
-  el.innerHTML = `
-    <div class="banner-inner">
-      ${img}
-      <div class="banner-text">
-        <div class="section-eyebrow">NOW ON</div>
-        <h2>${escapeHtml(tf(banner, "title"))}</h2>
-        <p>${escapeHtml(tf(banner, "description"))}</p>
+  return `
+    <div class="project-card">
+      <div class="thumb">${img}</div>
+      <div class="body">
+        <div class="cat-row">${loc ? `<span class="brand-tag">${escapeHtml(loc)}</span>` : ""}</div>
+        <h3>${escapeHtml(tf(e, "title"))}</h3>
+        <div class="meta">${escapeHtml(e.period || "")}</div>
+        ${tf(e, "description") ? `<p style="font-size:14px;color:var(--navy-soft);margin:10px 0 0;">${escapeHtml(tf(e, "description"))}</p>` : ""}
         ${link}
       </div>
     </div>`;
-  el.style.display = "block";
+}
+
+function renderBannerFrame() {
+  const el = document.querySelector("[data-banner]");
+  if (!el || !BANNER_ITEMS.length) return;
+  const b = BANNER_ITEMS[BANNER_INDEX];
+  const img = b.image ? `<div class="banner-photo"><img src="${b.image}" alt=""></div>` : "";
+  const link = b.link
+    ? `<a class="btn" href="${b.link}">${escapeHtml(tf(b, "link_text") || t("banner_default_link"))}</a>`
+    : "";
+  const arrows = BANNER_ITEMS.length > 1
+    ? `<button class="carousel-arrow prev" data-dir="-1" aria-label="prev">‹</button>
+       <button class="carousel-arrow next" data-dir="1" aria-label="next">›</button>`
+    : "";
+  const dots = BANNER_ITEMS.length > 1
+    ? `<div class="carousel-dots">${BANNER_ITEMS.map((_, i) => `<span class="dot${i === BANNER_INDEX ? " active" : ""}" data-dot="${i}"></span>`).join("")}</div>`
+    : "";
+
+  el.querySelector(".wrap").innerHTML = `
+    <div class="banner-carousel">
+      ${arrows}
+      <div class="banner-inner">
+        ${img}
+        <div class="banner-text">
+          <div class="section-eyebrow">${t("events_eyebrow")}</div>
+          <h2><a href="#current-events">${escapeHtml(tf(b, "title"))}</a></h2>
+          ${b.location || b.period ? `<div class="banner-meta">${escapeHtml(tf(b, "location") || "")}${b.location && b.period ? " · " : ""}${escapeHtml(b.period || "")}</div>` : ""}
+          <p>${escapeHtml(tf(b, "description"))}</p>
+          ${link}
+        </div>
+      </div>
+      ${dots}
+    </div>`;
+
+  el.querySelectorAll("[data-dir]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      BANNER_INDEX = (BANNER_INDEX + parseInt(btn.dataset.dir) + BANNER_ITEMS.length) % BANNER_ITEMS.length;
+      renderBannerFrame();
+    });
+  });
+  el.querySelectorAll("[data-dot]").forEach(dot => {
+    dot.addEventListener("click", () => {
+      BANNER_INDEX = parseInt(dot.dataset.dot);
+      renderBannerFrame();
+    });
+  });
+}
+
+async function renderBannerAndEvents() {
+  const data = await fetchJSON("content/banners.json");
+  const bannerEl = document.querySelector("[data-banner]");
+  const eventsEl = document.querySelector("[data-events]");
+  const items = (data && data.items) ? data.items.filter(i => i.enabled !== false) : [];
+  BANNER_ITEMS = items;
+  BANNER_INDEX = 0;
+
+  if (bannerEl) {
+    if (items.length) {
+      renderBannerFrame();
+      bannerEl.style.display = "block";
+    } else {
+      bannerEl.style.display = "none";
+    }
+  }
+
+  if (eventsEl) {
+    if (items.length) {
+      const titleEl = eventsEl.querySelector("[data-events-title]");
+      if (titleEl) titleEl.textContent = tf(data, "section_title") || t("events_title_fallback");
+      eventsEl.querySelector("[data-events-grid]").innerHTML = items.map(eventCardHTML).join("");
+      eventsEl.closest("section").style.display = "block";
+    } else {
+      eventsEl.closest("section").style.display = "none";
+    }
+  }
 }
 
 async function renderBrands() {
@@ -105,7 +185,7 @@ async function renderHome() {
   }
 
   await renderLive();
-  await renderBanner();
+  await renderBannerAndEvents();
   await renderBrands();
 
   const projects = await fetchJSON("content/projects.json");

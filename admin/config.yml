@@ -131,22 +131,32 @@ collections:
               - { label: "로고 이미지 (선택)", name: "logo", widget: "image", required: false }
               - { label: "브랜드 자체 홈페이지 링크 (있는 경우만)", name: "url", widget: "string", required: false }
 
-  - name: "banner"
-    label: "홈 배너 (진행중 축제 소개)"
+  - name: "banners"
+    label: "진행중인 행사 배너 (여러 개 등록 가능)"
     files:
-      - name: "banner"
-        label: "배너 수정"
-        file: "content/banner.json"
+      - name: "banners"
+        label: "배너 및 진행중인 행사 수정"
+        file: "content/banners.json"
         fields:
-          - { label: "배너 표시 여부", name: "enabled", widget: "boolean", default: false }
-          - { label: "사진", name: "image", widget: "image", required: false }
-          - { label: "제목 (한글)", name: "title", widget: "string", required: false }
-          - { label: "제목 (영문, 선택)", name: "title_en", widget: "string", required: false }
-          - { label: "설명 (한글)", name: "description", widget: "text", required: false }
-          - { label: "설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
-          - { label: "링크 (외부 주소 또는 project.html?id=슬러그)", name: "link", widget: "string", required: false }
-          - { label: "버튼 문구 (한글)", name: "link_text", widget: "string", required: false }
-          - { label: "버튼 문구 (영문, 선택)", name: "link_text_en", widget: "string", required: false }
+          - { label: "하단 섹션 제목 (한글, 예: 진행중인 행사)", name: "section_title", widget: "string" }
+          - { label: "하단 섹션 제목 (영문, 선택)", name: "section_title_en", widget: "string", required: false }
+          - label: "행사 (배너에 순서대로 노출, 계속 추가 가능)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "홈 배너/목록에 노출", name: "enabled", widget: "boolean", default: true }
+              - { label: "사진", name: "image", widget: "image", required: false }
+              - { label: "행사명 (한글)", name: "title", widget: "string" }
+              - { label: "행사명 (영문, 선택)", name: "title_en", widget: "string", required: false }
+              - { label: "장소 (선택)", name: "location", widget: "string", required: false }
+              - { label: "장소 (영문, 선택)", name: "location_en", widget: "string", required: false }
+              - { label: "기간 (예: 2026.07.10~08.10, 선택)", name: "period", widget: "string", required: false }
+              - { label: "설명 (한글)", name: "description", widget: "text", required: false }
+              - { label: "설명 (영문, 선택)", name: "description_en", widget: "text", required: false }
+              - { label: "링크 (외부 주소 또는 project.html?id=슬러그, 선택)", name: "link", widget: "string", required: false }
+              - { label: "버튼 문구 (한글)", name: "link_text", widget: "string", required: false }
+              - { label: "버튼 문구 (영문, 선택)", name: "link_text_en", widget: "string", required: false }
 
   - name: "popup"
     label: "팝업 공지"
