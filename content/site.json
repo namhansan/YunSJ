@@ -2,11 +2,15 @@
   "socials": [
     {
       "platform": "instagram",
-      "url": "test"
+      "url": "https://www.instagram.com/"
     },
     {
       "platform": "facebook",
-      "url": "test"
+      "url": "https://www.facebook.com"
+    },
+    {
+      "platform": "blog",
+      "url": "https://naver.com"
     }
   ],
   "logo_subtitle": "축제총감독 · 문화기획가",
