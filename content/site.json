@@ -1,13 +1,26 @@
 {
-  "name_kr": "윤성진",
-  "name_hanja": "尹盛鎭",
-  "name_en": "Paul Yun",
-  "nickname": "몽감독",
-  "tagline": "축제로 도시를 기획하는 문화경험디자이너",
+  "socials": [
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com"
+    },
+    {
+      "platform": "kakao",
+      "url": "https://kakao.com"
+    }
+  ],
+  "logo_subtitle": "축제총감독 · 문화기획가",
   "intro": "문화학박사이자 축제전문가로, 세종축제·한강몽땅·순천만국제정원박람회 등 대한민국을 대표하는 도시축제와 문화행사를 기획·연출해왔습니다. (사)한국문화기획학교 교장으로서 문화기획 인력 양성에도 힘쓰고 있습니다.",
-  "profile_photo": "",
+  "nickname": "몽감독",
   "phone": "010-7131-9210",
-  "email": "tozio210@hanmail.net",
+  "tagline": "축제로 도시를 기획하는 문화경험디자이너",
+  "name_footer": "Yun Seongjin",
+  "name_hanja": "尹盛鎭",
+  "tagline_en": "A Cultural Experience Designer Who Shapes Cities Through Festivals",
   "titles": [
     {
       "label": "축제전문가",
@@ -26,10 +39,10 @@
       "label_en": "Cultural Experience Designer"
     }
   ],
-  "tagline_en": "A Cultural Experience Designer Who Shapes Cities Through Festivals",
-  "intro_en": "A Ph.D. in Cultural Studies and festival specialist, he has planned and directed some of Korea's leading city festivals, including the Sejong Festival, Hangang Mongttang, and the Suncheon Bay International Garden Expo. As Dean of the Korea Cultural Planning School, he is also dedicated to training the next generation of cultural planners.",
-  "name_footer": "Yun Seongjin",
-  "logo_subtitle": "축제총감독 · 문화기획가",
+  "name_kr": "윤성진",
+  "profile_photo": "/images/uploads/picture1.jpg",
   "logo_subtitle_en": "Festival Director · Cultural Planner",
-  "socials": []
+  "intro_en": "A Ph.D. in Cultural Studies and festival specialist, he has planned and directed some of Korea's leading city festivals, including the Sejong Festival, Hangang Mongttang, and the Suncheon Bay International Garden Expo. As Dean of the Korea Cultural Planning School, he is also dedicated to training the next generation of cultural planners.",
+  "email": "tozio210@gmail.com",
+  "name_en": "Paul Yun"
 }
