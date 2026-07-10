@@ -457,3 +457,13 @@ img { max-width: 100%; display: block; }
   .social-bar a, .back-to-top { width: 32px; height: 32px; }
   .social-bar svg { width: 14px; height: 14px; }
 }
+
+/* ---- Event status badges ---- */
+.thumb { position: relative; }
+.status-badge {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; color: #fff;
+}
+.status-badge.past { background: rgba(27,36,48,0.75); }
+.brand-tag.status-ongoing { background: var(--accent); color: #fff; }

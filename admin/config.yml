@@ -153,24 +153,44 @@ collections:
               - { label: "브랜드 자체 홈페이지 링크 (있는 경우만)", name: "url", widget: "string", required: false }
 
   - name: "banners"
-    label: "진행중인 행사 배너 (여러 개 등록 가능)"
+    label: "행사 (진행중·예정·지난 행사 전체 관리)"
     files:
       - name: "banners"
-        label: "배너 및 진행중인 행사 수정"
+        label: "행사 목록 수정"
         file: "content/banners.json"
         fields:
           - { label: "하단 섹션 제목 (한글, 예: 진행중인 행사)", name: "section_title", widget: "string" }
           - { label: "하단 섹션 제목 (영문, 선택)", name: "section_title_en", widget: "string", required: false }
-          - label: "행사 (배너에 순서대로 노출, 계속 추가 가능)"
+          - label: "행사 (계속 추가 가능)"
             name: "items"
             widget: "list"
-            summary: "{{fields.title}}"
+            summary: "{{fields.status}} — {{fields.title}}"
             fields:
-              - { label: "홈 배너/목록에 노출", name: "enabled", widget: "boolean", default: true }
+              - { label: "홈 배너/목록에 노출 (진행중·예정 행사만 해당. 지난 행사는 이 설정과 무관하게 '행사' 페이지 지난 행사 탭에 항상 노출됩니다)", name: "enabled", widget: "boolean", default: true }
+              - label: "상태"
+                name: "status"
+                widget: "select"
+                default: "upcoming"
+                options:
+                  - { label: "진행중", value: "ongoing" }
+                  - { label: "예정", value: "upcoming" }
+                  - { label: "종료 (지난 행사)", value: "past" }
+              - label: "구분"
+                name: "category"
+                widget: "select"
+                default: "festival"
+                options:
+                  - { label: "축제", value: "festival" }
+                  - { label: "전시", value: "exhibition" }
+                  - { label: "마켓·팝업", value: "market_popup" }
+                  - { label: "공연", value: "performance" }
+                  - { label: "기타", value: "etc" }
               - { label: "사진 (대표 사진)", name: "image", widget: "image", required: false }
               - { label: "행사명 (한글)", name: "title", widget: "string" }
               - { label: "행사명 (영문, 선택)", name: "title_en", widget: "string", required: false }
               - { label: "고유 주소 (영문/숫자, 공백없이. 예: hangang-festival-2026)", name: "slug", widget: "string", hint: "행사 상세 페이지 링크 주소로 쓰입니다. 다른 행사와 겹치지 않게 만들어주세요." }
+              - { label: "소속 사업 브랜드 (선택, '사업 브랜드'에 등록한 이름과 똑같이 입력)", name: "brand", widget: "string", required: false }
+              - { label: "주최/주관 (선택)", name: "organizer", widget: "string", required: false }
               - { label: "장소 (선택)", name: "location", widget: "string", required: false }
               - { label: "장소 (영문, 선택)", name: "location_en", widget: "string", required: false }
               - { label: "기간 (예: 2026.07.10~08.10, 선택)", name: "period", widget: "string", required: false }

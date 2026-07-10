@@ -7,18 +7,18 @@
       "tagline_en": "Setting a new standard for festivals across Asia",
       "description": "지역의 콘텐츠·미식·사람·지속가능성·데이터를 하나의 문화경험생태계로 연결하는 페스티벌 플랫폼 회사다",
       "description_en": "A festival platform company that connects local content, gastronomy, people, sustainability, and data into a single cultural experience ecosystem.",
-      "logo": "/images/uploads/스크린샷-2026-07-10-오후-4.08.01.png",
+      "logo": "",
       "url": ""
     },
     {
       "name": "㈜고메노마드",
-      "name_en": "",
-      "tagline": "",
-      "tagline_en": "",
-      "description": "",
-      "description_en": "",
+      "name_en": "GourmetNomad",
+      "tagline": "움직이는 미식 문화 기획자",
+      "tagline_en": "A Mobile Culinary Culture Planner",
+      "description": "8,000건 이상의 푸드트럭 행사 운영 경력을 바탕으로 기업행사·브랜드 이벤트 케이터링부터 팝업, 미식 콘텐츠 기획까지 아우르는 대한민국 No.1 모빌리티 미식 디렉터입니다. '월간소반', '더로드셰프' 등 자체 미식 IP도 함께 운영하고 있습니다.",
+      "description_en": "Korea's No.1 mobility gourmet director, drawing on experience from over 8,000 food truck events to handle everything from corporate and brand event catering to pop-ups and culinary content planning. Also runs its own food IPs, including 'Monthly Soban' and 'The Road Chef.'",
       "logo": "",
-      "url": ""
+      "url": "https://www.gourmetnomad.kr/"
     }
   ]
 }

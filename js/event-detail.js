@@ -28,9 +28,17 @@ async function renderEventDetail() {
     : "";
   const bodyText = tf(ev, "body") || tf(ev, "description");
 
+  const lang = getLang();
+  const statusLabel = EVENT_STATUS_LABELS[lang][ev.status] || "";
+  const catLabel = EVENT_CATEGORY_LABELS[lang][ev.category] || "";
+
   container.innerHTML = `
     <a class="back-link" href="events.html">${t("back_to_events")}</a>
-    <div class="cat-row">${ev.location ? `<span class="brand-tag">${escapeHtml(tf(ev, "location"))}</span>` : ""}</div>
+    <div class="cat-row">
+      ${catLabel ? `<span class="detail-cat">${escapeHtml(catLabel)}</span>` : ""}
+      ${ev.location ? `<span class="brand-tag">${escapeHtml(tf(ev, "location"))}</span>` : ""}
+      ${statusLabel ? `<span class="brand-tag${ev.status === "ongoing" ? " status-ongoing" : ""}">${escapeHtml(statusLabel)}</span>` : ""}
+    </div>
     <h1 class="detail-title">${escapeHtml(tf(ev, "title"))}</h1>
     <div class="detail-meta">${escapeHtml(ev.period || "")}</div>
     ${cover}

@@ -69,12 +69,19 @@ function eventLink(e) {
 function eventCardHTML(e) {
   const img = e.image ? `<img src="${e.image}" alt="${escapeHtml(tf(e, "title"))}">` : "";
   const loc = tf(e, "location");
+  const lang = getLang();
+  const statusLabel = EVENT_STATUS_LABELS[lang][e.status] || "";
+  const catLabel = EVENT_CATEGORY_LABELS[lang][e.category] || "";
   const { href, target, rel } = eventLink(e);
   return `
     <a class="project-card" href="${href}" target="${target}" ${rel}>
-      <div class="thumb">${img}</div>
+      <div class="thumb">${img}${e.status === "past" ? `<span class="status-badge past">${escapeHtml(statusLabel)}</span>` : ""}</div>
       <div class="body">
-        <div class="cat-row">${loc ? `<span class="brand-tag">${escapeHtml(loc)}</span>` : ""}</div>
+        <div class="cat-row">
+          ${catLabel ? `<span class="cat">${escapeHtml(catLabel)}</span>` : ""}
+          ${loc ? `<span class="brand-tag">${escapeHtml(loc)}</span>` : ""}
+          ${e.status === "ongoing" ? `<span class="brand-tag status-ongoing">${escapeHtml(statusLabel)}</span>` : ""}
+        </div>
         <h3>${escapeHtml(tf(e, "title"))}</h3>
         <div class="meta">${escapeHtml(e.period || "")}</div>
         ${tf(e, "description") ? `<p style="font-size:14px;color:var(--navy-soft);margin:10px 0 0;">${escapeHtml(tf(e, "description"))}</p>` : ""}
@@ -131,7 +138,7 @@ async function renderBannerAndEvents() {
   const data = await fetchJSON("content/banners.json");
   const bannerEl = document.querySelector("[data-banner]");
   const eventsEl = document.querySelector("[data-events]");
-  const items = (data && data.items) ? data.items.filter(i => i.enabled !== false) : [];
+  const items = (data && data.items) ? data.items.filter(i => i.enabled !== false && i.status !== "past") : [];
   BANNER_ITEMS = items;
   BANNER_INDEX = 0;
 

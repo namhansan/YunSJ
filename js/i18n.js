@@ -10,6 +10,16 @@ const MEDIA_TYPE_LABELS = {
   en: { press: "Press", interview: "Interview", book: "Publications", report: "Report" }
 };
 
+const EVENT_STATUS_LABELS = {
+  ko: { ongoing: "진행중", upcoming: "예정", past: "종료" },
+  en: { ongoing: "Ongoing", upcoming: "Upcoming", past: "Past" }
+};
+
+const EVENT_CATEGORY_LABELS = {
+  ko: { festival: "축제", exhibition: "전시", market_popup: "마켓·팝업", performance: "공연", etc: "기타" },
+  en: { festival: "Festival", exhibition: "Exhibition", market_popup: "Market & Pop-up", performance: "Performance", etc: "Other" }
+};
+
 const UI_STRINGS = {
   ko: {
     nav_home: "홈", nav_profile: "프로필", nav_projects: "프로젝트", nav_contact: "연락처",
@@ -50,7 +60,9 @@ const UI_STRINGS = {
     nav_events: "행사",
     events_page_desc: "현재 진행 중이거나 곧 열리는 행사들을 소개합니다.",
     back_to_events: "← 전체 행사로 돌아가기",
-    event_not_found: "행사를 찾을 수 없습니다."
+    event_not_found: "행사를 찾을 수 없습니다.",
+    tab_current_events: "진행중·예정", tab_past_events: "지난 행사",
+    filter_category_all: "전체 구분"
   },
   en: {
     nav_home: "Home", nav_profile: "Profile", nav_projects: "Projects", nav_contact: "Contact",
@@ -91,7 +103,9 @@ const UI_STRINGS = {
     nav_events: "Events",
     events_page_desc: "Events that are currently underway or coming up soon.",
     back_to_events: "← Back to all events",
-    event_not_found: "Event not found."
+    event_not_found: "Event not found.",
+    tab_current_events: "Current & Upcoming", tab_past_events: "Past Events",
+    filter_category_all: "All Types"
   }
 };
 
