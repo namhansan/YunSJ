@@ -1,3 +1,100 @@
 {
-  "items": []
+  "items": [
+    {
+      "type": "column",
+      "date": "2026-01-19",
+      "title": "#0. 먹거리장터를 넘어 미식문화플랫폼으로",
+      "title_en": "#0. Beyond the Food Market: Toward a Culinary Culture Platform",
+      "summary": "구미라면축제 사례를 통해 지역 음식축제가 '먹거리장터'를 넘어 미식문화플랫폼으로 나아가기 위한 다섯 가지 전략을 제시합니다.",
+      "summary_en": "Using the Gumi Ramen Festival as a case study, this piece outlines five strategies for turning local food festivals into cultural gastronomy platforms.",
+      "file": "files/columns/mong-column-00-food-platform.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-04-14",
+      "title": "#1. 우리 곁에 '오래 가는 친구' 하나 만들자는 이야기",
+      "title_en": "#1. Let's Make a 'Lasting Friend' Beside Us",
+      "summary": "매년 반복되는 축제 준비의 어려움을 짚으며, 축제 곁에서 오래 함께할 민간 비영리 중간조직 '한국축제지원센터'의 필요성을 제안합니다.",
+      "summary_en": "Reflecting on the yearly struggle of festival preparation, this column proposes a nonprofit 'Korea Festival Support Center' to stand alongside festivals for the long term.",
+      "file": "files/columns/mong-column-01-festival-support-center.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-04-15",
+      "title": "#2. 축제의 독립선언",
+      "title_en": "#2. A Declaration of Independence for Festivals",
+      "summary": "관 주도로 굳어진 한국 축제의 구조를 돌아보고, 시민이 주인이 되는 '축제의 독립'이 필요한 이유를 이야기합니다.",
+      "summary_en": "A look at Korea's government-led festival structure and why festivals need to become truly citizen-owned.",
+      "file": "files/columns/mong-column-02-festival-independence.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-04-30",
+      "title": "#3. 위기의 순간에 도움을 청할 이웃",
+      "title_en": "#3. Do You Have a Neighbor to Call On in a Crisis?",
+      "summary": "공동체 지수 통계를 실마리로, 작은 마을 축제가 끊어진 이웃 관계와 지역 소멸 위기를 잇는 힘이 될 수 있음을 짚습니다.",
+      "summary_en": "Drawing on community-index statistics, this piece argues that small local festivals can help rebuild broken neighborly ties and slow regional decline.",
+      "file": "files/columns/mong-column-03-neighbor-in-crisis.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-06-02",
+      "title": "#4. 축제는 인스턴트가 아니다 — 축제개발",
+      "title_en": "#4. Festivals Are Not Instant — On Festival Development",
+      "summary": "콘텐츠부터 만들고 보는 흔한 함정을 짚으며, 축제는 시간과 정성으로 익어가는 살아있는 문화유기체임을 강조합니다.",
+      "summary_en": "Warning against the common trap of starting with programming ideas, this column argues that festivals are living cultural organisms that need time to mature.",
+      "file": "files/columns/mong-column-04-festival-development.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-06-04",
+      "title": "#5. 축제평가, 줄 세우는 잣대에서 성장의 나침반으로",
+      "title_en": "#5. Festival Evaluation: From a Ranking Yardstick to a Compass for Growth",
+      "summary": "15년 넘게 축제를 평가해온 경험을 바탕으로, 줄 세우는 평가에서 함께 성장하는 '나침반형 평가'로의 전환을 제안합니다.",
+      "summary_en": "Drawing on 15+ years of evaluating festivals, this piece calls for shifting from ranking-based evaluation to a 'compass' model that helps festivals grow.",
+      "file": "files/columns/mong-column-05-festival-evaluation.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-06-15",
+      "title": "#6. AI 시대, 왜 '진짜 축제'가 더 중요해지는가",
+      "title_en": "#6. In the Age of AI, Why 'Real Festivals' Matter More",
+      "summary": "무한 복제가 가능한 AI 시대일수록, 복제 불가능한 현장성과 공동 창작의 경험을 지닌 '진짜 축제'의 가치가 더 커진다고 말합니다.",
+      "summary_en": "As AI makes infinite replication possible, this column argues that the irreplaceable, co-created experience of a 'real festival' only grows more valuable.",
+      "file": "files/columns/mong-column-06-ai-era-real-festival.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    },
+    {
+      "type": "column",
+      "date": "2026-07-10",
+      "title": "#7. 축제에도 뿌리가 필요하다 — 재원 다각화",
+      "title_en": "#7. Festivals Need Roots Too — On Diversifying Funding",
+      "summary": "해외 축제들의 재원 다각화 사례를 통해, 공공 예산에만 의존하지 않는 축제가 어떻게 스스로 뿌리내릴 수 있는지를 이야기합니다.",
+      "summary_en": "Looking at how festivals abroad diversify funding, this piece explores how festivals can put down roots instead of relying solely on public budgets.",
+      "file": "files/columns/mong-column-07-funding-diversification.pdf",
+      "source": "몽감독의 축제이야기",
+      "cover": "",
+      "link": ""
+    }
+  ]
 }

@@ -6,8 +6,8 @@ const CATEGORY_LABELS = {
 };
 
 const MEDIA_TYPE_LABELS = {
-  ko: { press: "언론보도", interview: "인터뷰", book: "저서", report: "리포트" },
-  en: { press: "Press", interview: "Interview", book: "Publications", report: "Report" }
+  ko: { column: "칼럼", press: "언론보도", interview: "인터뷰", book: "저서", report: "리포트" },
+  en: { column: "Column", press: "Press", interview: "Interview", book: "Publications", report: "Report" }
 };
 
 const EVENT_STATUS_LABELS = {
