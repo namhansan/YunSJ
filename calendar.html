@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>미디어 | 윤성진</title>
+<title>캘린더 | 윤성진</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,8 +23,8 @@
       <a href="profile.html" data-i18n="nav_profile">프로필</a>
       <a href="projects.html" data-i18n="nav_projects">프로젝트</a>
       <a href="events.html" data-i18n="nav_events">행사</a>
-      <a href="calendar.html" data-i18n="nav_calendar" data-nav-calendar>캘린더</a>
-      <a href="media.html" data-i18n="nav_media" class="active">미디어</a>
+      <a href="calendar.html" data-i18n="nav_calendar" data-nav-calendar class="active">캘린더</a>
+      <a href="media.html" data-i18n="nav_media">미디어</a>
       <a href="index.html#contact" data-i18n="nav_contact">연락처</a>
       <div class="lang-toggle">
         <button data-lang-btn="ko">KO</button>
@@ -36,14 +36,29 @@
 </header>
 
 <section class="section" style="padding-top:60px;">
-  <div class="wrap">
+  <div class="wrap" data-calendar-wrap>
     <div class="section-head">
-      <div class="section-eyebrow" data-i18n="media_eyebrow">MEDIA & PUBLICATIONS</div>
-      <h2 class="section-title" data-i18n="media_title">언론·인터뷰·저서</h2>
-      <p class="section-desc" data-i18n="media_desc">그동안 소개된 언론 보도, 인터뷰, 저서, 연구 리포트를 모아봤습니다.</p>
+      <div class="section-eyebrow" data-i18n="calendar_eyebrow">SCHEDULE</div>
+      <h2 class="section-title" data-i18n="calendar_title">캘린더</h2>
+      <p class="section-desc" data-i18n="calendar_desc">행사 일정을 달력으로 한눈에 확인하고, 날짜를 클릭하면 해당 행사로 이동합니다.</p>
     </div>
-    <div class="filter-bar" data-filter-bar></div>
-    <div class="media-grid" data-media-grid>
+
+    <div class="cal-toolbar">
+      <div class="cal-nav">
+        <button class="cal-nav-btn" data-cal-prev aria-label="prev">‹</button>
+        <div class="cal-label" data-cal-label></div>
+        <button class="cal-nav-btn" data-cal-next aria-label="next">›</button>
+      </div>
+      <div class="cal-controls">
+        <button class="cal-today-btn" data-cal-today data-i18n="btn_today">오늘</button>
+        <div class="cal-view-toggle">
+          <button data-cal-view="month" data-i18n="view_month">월간</button>
+          <button data-cal-view="year" data-i18n="view_year">연간</button>
+        </div>
+      </div>
+    </div>
+
+    <div data-cal-body>
       <div class="empty-state" data-i18n="loading">불러오는 중…</div>
     </div>
   </div>
@@ -53,13 +68,14 @@
   <div class="wrap">© <span id="year"></span> <span data-footer-name style="text-transform:uppercase;">YUN SEONGJIN</span>. <span data-i18n="footer_rights">All rights reserved.</span></div>
 </footer>
 
-<script src="js/common.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/media.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <div class="fixed-actions">
   <div class="social-bar" data-social-bar></div>
   <button class="back-to-top" data-back-to-top aria-label="Back to top">↑</button>
 </div>
+
+<script src="js/common.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/calendar.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

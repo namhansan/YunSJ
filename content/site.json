@@ -31,5 +31,6 @@
   "name_footer": "Yun Seongjin",
   "logo_subtitle": "축제총감독 · 문화기획가",
   "logo_subtitle_en": "Festival Director · Cultural Planner",
-  "socials": []
+  "socials": [],
+  "calendar_enabled": true
 }

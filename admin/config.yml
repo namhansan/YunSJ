@@ -27,6 +27,7 @@ collections:
           - { label: "프로필 사진", name: "profile_photo", widget: "image", required: false }
           - { label: "전화번호", name: "phone", widget: "string" }
           - { label: "이메일", name: "email", widget: "string" }
+          - { label: "캘린더 메뉴 사용 (끄면 메뉴에서도 완전히 숨겨집니다)", name: "calendar_enabled", widget: "boolean", default: true }
           - label: "SNS / 개인 채널 링크 (오른쪽에 세로로 표시됩니다)"
             name: "socials"
             widget: "list"
@@ -208,6 +209,8 @@ collections:
               - { label: "장소 (선택)", name: "location", widget: "string", required: false }
               - { label: "장소 (영문, 선택)", name: "location_en", widget: "string", required: false }
               - { label: "기간 (예: 2026.07.10~08.10, 선택)", name: "period", widget: "string", required: false }
+              - { label: "시작일 (캘린더 표시용, 선택)", name: "start_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, picker_utc: true }
+              - { label: "종료일 (캘린더 표시용, 선택 — 하루짜리 행사는 비워두세요)", name: "end_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, picker_utc: true }
               - { label: "한 줄 요약 (한글)", name: "description", widget: "text", required: false }
               - { label: "한 줄 요약 (영문, 선택)", name: "description_en", widget: "text", required: false }
               - { label: "상세 내용 (한글, 선택 — 자체 상세 페이지 본문으로 쓰입니다)", name: "body", widget: "text", required: false }

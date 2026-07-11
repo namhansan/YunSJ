@@ -63,7 +63,13 @@ const UI_STRINGS = {
     back_to_events: "← 전체 행사로 돌아가기",
     event_not_found: "행사를 찾을 수 없습니다.",
     tab_current_events: "진행중·예정", tab_past_events: "지난 행사",
-    filter_category_all: "전체 구분"
+    filter_category_all: "전체 구분",
+    nav_calendar: "캘린더",
+    calendar_eyebrow: "SCHEDULE", calendar_title: "캘린더",
+    calendar_desc: "행사 일정을 달력으로 한눈에 확인하고, 날짜를 클릭하면 해당 행사로 이동합니다.",
+    view_month: "월간", view_year: "연간", btn_today: "오늘",
+    calendar_disabled: "현재 캘린더 기능이 꺼져 있습니다.",
+    weekdays: "일,월,화,수,목,금,토"
   },
   en: {
     nav_home: "Home", nav_profile: "Profile", nav_projects: "Projects", nav_contact: "Contact",
@@ -107,7 +113,13 @@ const UI_STRINGS = {
     back_to_events: "← Back to all events",
     event_not_found: "Event not found.",
     tab_current_events: "Current & Upcoming", tab_past_events: "Past Events",
-    filter_category_all: "All Types"
+    filter_category_all: "All Types",
+    nav_calendar: "Calendar",
+    calendar_eyebrow: "SCHEDULE", calendar_title: "Calendar",
+    calendar_desc: "See the full event schedule at a glance, and click any date to jump to that event.",
+    view_month: "Month", view_year: "Year", btn_today: "Today",
+    calendar_disabled: "The calendar feature is currently turned off.",
+    weekdays: "Sun,Mon,Tue,Wed,Thu,Fri,Sat"
   }
 };
 
@@ -190,6 +202,8 @@ function applySiteBasics(site) {
   document.querySelectorAll("[data-name]").forEach(el => el.textContent = siteDisplayName(site));
   document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
   document.querySelectorAll("[data-logo-subtitle]").forEach(el => el.textContent = tf(site, "logo_subtitle"));
+  const calendarOn = site.calendar_enabled !== false;
+  document.querySelectorAll("[data-nav-calendar]").forEach(el => el.style.display = calendarOn ? "" : "none");
   renderSocialBar(site);
 }
 
