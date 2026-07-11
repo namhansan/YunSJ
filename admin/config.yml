@@ -130,6 +130,20 @@ collections:
               - { label: "연도", name: "year", widget: "string" }
               - { label: "내용 (한글)", name: "title", widget: "string" }
               - { label: "내용 (영문, 선택)", name: "title_en", widget: "string", required: false }
+          - label: "핵심 역량 (강점)"
+            name: "strengths"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "제목 (한글)", name: "title", widget: "string" }
+              - { label: "제목 (영문, 선택)", name: "title_en", widget: "string", required: false }
+              - label: "내용 (bullet point, 여러 개 가능)"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "내용 (한글)", name: "content", widget: "string" }
+                  - { label: "내용 (영문, 선택)", name: "content_en", widget: "string", required: false }
 
   - name: "brands"
     label: "사업 브랜드"

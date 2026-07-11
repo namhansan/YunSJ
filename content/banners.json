@@ -4,7 +4,7 @@
   "items": [
     {
       "enabled": true,
-      "image": "",
+      "image": "images/uploads/profile/poster-hangang-mongttang.png",
       "title": "2026 한강몽땅 여름축제",
       "title_en": "2026 Hangang Mongttang Summer Festival",
       "location": "서울 한강공원 일대",
@@ -27,7 +27,7 @@
     },
     {
       "enabled": true,
-      "image": "",
+      "image": "images/uploads/profile/poster-gumi-ramyun.png",
       "title": "2026 구미라면축제",
       "title_en": "2026 Gumi Ramen Festival",
       "location": "경북 구미시 구미역 일원",

@@ -25,28 +25,32 @@
   ],
   "current_positions": [
     {
-      "content": "(사)한국문화기획학교 교장 (2013~현재)",
-      "content_en": "Dean, Korea Cultural Planning School (2013–present)"
+      "content": "(사)한국문화기획학교 교장 / 이사장 (2013~현재)",
+      "content_en": "Dean / Chairman, Korea Cultural Planning School (2013–present)"
+    },
+    {
+      "content": "문화경험디자인그룹 (주)파이브스톤즈 대표",
+      "content_en": "CEO, Cultural Experience Design Group FIVE STONES Co., Ltd."
+    },
+    {
+      "content": "(주)고메노마드 대표",
+      "content_en": "CEO, GourmetNomad Co., Ltd."
     },
     {
       "content": "한국축제감독회의 상임이사 (기획총괄)",
       "content_en": "Executive Director (Head of Programming), Korea Festival Directors Council"
     },
     {
+      "content": "대통령직속 아시아문화중심도시 조성위원회 위원 (문화예술 및 문화관광 소위원장)",
+      "content_en": "Committee Member, Presidential Committee for the Asian Culture City Project (Chair, Culture & Tourism Subcommittee)"
+    },
+    {
       "content": "서울사이버대학교 문화예술경영학과 겸임교수 (현재)",
       "content_en": "Adjunct Professor, Dept. of Cultural & Arts Management, Seoul Cyber University (present)"
     },
     {
-      "content": "구미라면축제 (2025~현재)",
-      "content_en": "Gumi Ramen Festival (2025–present)"
-    },
-    {
-      "content": "(주)파이브스톤즈 대표이사",
-      "content_en": "CEO, FIVE STONES Co., Ltd."
-    },
-    {
-      "content": "(주) 고메노마드 대표이사",
-      "content_en": "CEO, GourmetNomad Co., Ltd."
+      "content": "구미라면축제 총괄기획단장 (2024~현재)",
+      "content_en": "Executive Program Director, Gumi Ramen Festival (2024–present)"
     }
   ],
   "awards": [
@@ -73,12 +77,20 @@
   ],
   "festival_director": [
     {
-      "content": "순천만국제정원박람회 가든스테이 쉴랑게 총괄PM (2023)",
-      "content_en": "Executive PM, Garden Stay Shillange, Suncheon Bay International Garden Expo (2023)"
+      "content": "구미라면축제 총감독 (총괄기획단장) (2024~2026)",
+      "content_en": "Festival Director (Executive Program Director), Gumi Ramen Festival (2024–2026)"
     },
     {
-      "content": "포항 해양미식축제 마켓피어나인 총감독 (2023)",
-      "content_en": "Festival Director, Market Pier Nine, Pohang Ocean Gastronomy Festival (2023)"
+      "content": "2025 남도국제미식산업박람회 총감독",
+      "content_en": "Festival Director, 2025 Namdo International Gastronomy Industry Expo"
+    },
+    {
+      "content": "순천만국제정원박람회 가든스테이 쉴랑게 총감독 (2023)",
+      "content_en": "Festival Director, Garden Stay Shillange, Suncheon Bay International Garden Expo (2023)"
+    },
+    {
+      "content": "해양미식마켓 포항 마켓피어나인 총감독 (2023~2024)",
+      "content_en": "Festival Director, Market Pier Nine, Pohang Ocean Gastronomy Festival (2023–2024)"
     },
     {
       "content": "세종시 대표축제 '세종축제' 총감독 (2022~2023)",
@@ -135,6 +147,10 @@
   ],
   "event_direction": [
     {
+      "content": "2023 세종시 세종축제 개막행사 주제공연 '고래의 꿈' 총연출",
+      "content_en": "Executive Director, 'Dream of the Whale' Opening Ceremony Performance, Sejong Festival (2023)"
+    },
+    {
       "content": "2012 한국문화원연합회 창립 50주년 기념행사 총연출",
       "content_en": "Executive Director, 50th Anniversary Ceremony of the Korean Federation of Cultural Centers (2012)"
     },
@@ -179,9 +195,25 @@
     {
       "content": "농림축산식품부 농어촌 우수축제 평가위원 (2012~2015)",
       "content_en": "Evaluation Committee Member, Outstanding Rural Festivals, Ministry of Agriculture, Food & Rural Affairs (2012–2015)"
+    },
+    {
+      "content": "목포 맛의도시 자문단 자문위원 (2019)",
+      "content_en": "Advisory Committee Member, Mokpo City of Taste Initiative (2019)"
+    },
+    {
+      "content": "2024 국가보훈부 지역보훈문화제 평가컨설팅 책임연구원",
+      "content_en": "Principal Investigator, Evaluation & Consulting for Regional Patriotic Culture Festivals, Ministry of Patriots and Veterans Affairs (2024)"
     }
   ],
   "consulting_research": [
+    {
+      "content": "2024 부산영도구 영도다리축제 기획컨설팅 연구 책임연구원",
+      "content_en": "Principal Investigator, Planning Consultancy for the Busan Yeongdo-gu Yeongdo Bridge Festival (2024)"
+    },
+    {
+      "content": "2024 신안군 추포도 식문화관광거점 조성사업 기획설계연구 책임연구원",
+      "content_en": "Principal Investigator, Planning & Design Study for the Chupo-do Food & Culture Tourism Hub, Sinan-gun (2024)"
+    },
     {
       "content": "2021 세종시 대표축제 '세종축제' 개선방안 연구 책임연구원",
       "content_en": "Principal Investigator, Study on Improving Sejong City's Flagship 'Sejong Festival' (2021)"
@@ -229,6 +261,14 @@
   ],
   "school_activities": [
     {
+      "content": "내일의 축제감독 양성과정 교장 (2026)",
+      "content_en": "Dean, 'Next Generation Festival Directors' Training Program (2026)"
+    },
+    {
+      "content": "동대문 축제코디네이터 문워커 양성교육 (2025)",
+      "content_en": "Instructor, Dongdaemun Festival Coordinator 'Moonwalker' Training Program (2025)"
+    },
+    {
       "content": "관악 시민문화기획학교 교장 (서울 관악구, 2021, 2022)",
       "content_en": "Dean, Gwanak Citizens' Cultural Planning School (Gwanak-gu, Seoul, 2021, 2022)"
     },
@@ -259,16 +299,16 @@
   ],
   "lectures": [
     {
-      "content": "서울사이버대학교 문화예술경영학과 겸임교수 (2022~현재)",
-      "content_en": "Adjunct Professor, Dept. of Cultural & Arts Management, Seoul Cyber University (2022–present)"
+      "content": "서울사이버대학교 문화예술경영학과 겸임교수 — 축제와 문화 강의 (3년차)",
+      "content_en": "Adjunct Professor, Dept. of Cultural & Arts Management, Seoul Cyber University — Festival & Culture course (3rd year)"
     },
     {
-      "content": "전남대학교 문화전문대학원 겸임교수 (2010~2014)",
-      "content_en": "Adjunct Professor, Graduate School of Culture, Chonnam National University (2010–2014)"
+      "content": "전남대학교 문화전문대학원 겸임교수 — 축제·문화기업론 강의 (4년)",
+      "content_en": "Adjunct Professor, Graduate School of Culture, Chonnam National University — Festival & Cultural Enterprise courses (4 years)"
     },
     {
-      "content": "안양대학교 공연예술학과 & 신문방송학과 겸임교수 (2005~2011)",
-      "content_en": "Adjunct Professor, Dept. of Performing Arts & Dept. of Journalism and Broadcasting, Anyang University (2005–2011)"
+      "content": "안양대학교 신문방송학과 및 공연예술학과 겸임교수 (8년) — 축제기획·예술경영·공연기획 강의",
+      "content_en": "Adjunct Professor, Dept. of Journalism & Broadcasting and Dept. of Performing Arts, Anyang University (8 years) — Festival Planning, Arts Management, Performance Production"
     },
     {
       "content": "명지대 문화예술경영대학원 외래교수",
@@ -283,5 +323,97 @@
       "content_en": "Visiting Professor, Graduate School of Cultural & Arts Management at Chugye University for the Arts, Kangwon National University, and Hoseo University"
     }
   ],
-  "intro_long_en": "Nickname: Director Mong\n\nDirector Mong is a dreamer and doer who believes festivals can make the world a happier place.\n\nIn his 30s, he built his festival direction skills through the organizing committee of the '97 World Performing Arts Festival, and went on to help launch the Seoul International Dance Festival (SIDance), the ASSITEJ World Congress and World Festival of Theatre for Children and Young People, and the Changmu International Performing Arts Festival, engaging with dance, theatre, and children's performing arts across many genres.\n\nIn his 40s, he served as Festival Director and Artistic Director for Korea's first editions of the Silver Culture Festival, the Living Culture Festival, the Intangible Heritage Festival, and the ASEAN-Korea Festival, establishing himself as a leading festival director through new and original programming.\n\nFrom his late 40s through his 50s, he has continued to plan and direct large-scale city festivals as Festival Director of flagship urban festivals such as Hangang Mongttang and the Sejong Festival, applying a platform-based model for city culture festivals."
+  "intro_long_en": "Nickname: Director Mong\n\nDirector Mong is a dreamer and doer who believes festivals can make the world a happier place.\n\nIn his 30s, he built his festival direction skills through the organizing committee of the '97 World Performing Arts Festival, and went on to help launch the Seoul International Dance Festival (SIDance), the ASSITEJ World Congress and World Festival of Theatre for Children and Young People, and the Changmu International Performing Arts Festival, engaging with dance, theatre, and children's performing arts across many genres.\n\nIn his 40s, he served as Festival Director and Artistic Director for Korea's first editions of the Silver Culture Festival, the Living Culture Festival, the Intangible Heritage Festival, and the ASEAN-Korea Festival, establishing himself as a leading festival director through new and original programming.\n\nFrom his late 40s through his 50s, he has continued to plan and direct large-scale city festivals as Festival Director of flagship urban festivals such as Hangang Mongttang and the Sejong Festival, applying a platform-based model for city culture festivals.",
+  "strengths": [
+    {
+      "title": "대규모 축제공간 운영 경험",
+      "title_en": "Experience Operating Large-Scale Festival Spaces",
+      "items": [
+        {
+          "content": "국내 최대 규모 행사장에서 7년간 축제를 기획·운영 — 한강 11개 공원과 수상공간을 모두 활용한 한강몽땅 (월 1천만 명 방문)",
+          "content_en": "Planned and ran festivals for 7 years at Korea's largest venue — Hangang Mongttang used all 11 Hangang parks and the river itself (10M+ visitors a month)"
+        },
+        {
+          "content": "세종시 도심 공원 전체를 축제장으로 만든 세종축제 (2022·23년 20만 명 이상 참여, 중앙공원·호수공원·금강보행교 등 활용)",
+          "content_en": "Turned Sejong City's entire downtown park network into a festival venue for the Sejong Festival (200,000+ participants in 2022–23)"
+        },
+        {
+          "content": "서울 밤도깨비야시장을 서울시 주요 관광명소 4곳에서 연간 180회 이상 동시 개최",
+          "content_en": "Ran the Seoul Bamdokkaebi Night Market simultaneously at 4 major Seoul landmarks, 180+ times a year"
+        }
+      ]
+    },
+    {
+      "title": "대규모 방문객 안전 운영관리",
+      "title_en": "Safe Operations at Scale",
+      "items": [
+        {
+          "content": "연간 100~120만 명이 참여한 한강몽땅을 7년간 인사사고·안전사고 없이 운영",
+          "content_en": "Ran Hangang Mongttang (1–1.2M annual participants) for 7 years without a single safety incident"
+        },
+        {
+          "content": "연간 400만 명 이상이 방문한 밤도깨비야시장을 7년간 안전사고 없이 운영",
+          "content_en": "Ran Bamdokkaebi Night Market (4M+ annual visitors) for 7 years without a safety incident"
+        },
+        {
+          "content": "연간 120~150만 명이 찾는 남산골한옥마을을 5년간 총감독으로 안전사고 없이 운영",
+          "content_en": "Directed Namsangol Hanok Village (1.2–1.5M annual visitors) for 5 years without a safety incident"
+        }
+      ]
+    },
+    {
+      "title": "전문가 협업 네트워크",
+      "title_en": "Expert Collaboration Network",
+      "items": [
+        {
+          "content": "총감독 1인 체제가 아닌 전문 협력디렉터 그룹·감독단이 함께하는 안정적인 기획·운영 시스템 운영",
+          "content_en": "Runs festivals through a stable system of collaborating expert directors, not a single-director model"
+        },
+        {
+          "content": "밤도깨비야시장 푸드마켓 심사위원단, 김치문화축제 등 다양한 F&B 사업으로 쌓은 음식분야 전문가 네트워크 보유",
+          "content_en": "Built a deep F&B expert network through roles like the Bamdokkaebi food market judging panel and the Kimchi Culture Festival"
+        },
+        {
+          "content": "국내 최고 축제감독 20인의 네트워크인 한국축제감독회의 기획 상임이사 역할을 지속적으로 수행",
+          "content_en": "Continues to serve as Executive Director of the Korea Festival Directors Council, a network of 20 leading festival directors"
+        }
+      ]
+    },
+    {
+      "title": "축제 지속가능성 감독제도 국내 최초 도입",
+      "title_en": "First to Introduce a Festival Sustainability Director System in Korea",
+      "items": [
+        {
+          "content": "국내 최초로 지속가능성 모니터링을 F&B 마켓인 서울 밤도깨비야시장에 도입",
+          "content_en": "Introduced Korea's first sustainability monitoring system at the Bamdokkaebi Night Market F&B market"
+        },
+        {
+          "content": "한강몽땅, 순천만국제정원박람회, 세종축제, 구미라면축제 등 관여하는 모든 축제에 지속가능성 선언 및 감독제도 운영",
+          "content_en": "Runs a sustainability declaration and director system across every festival he leads — Hangang Mongttang, Suncheon Bay Expo, Sejong Festival, Gumi Ramen Festival, and more"
+        },
+        {
+          "content": "국내 ESG·친환경 축제 네트워크인 Festival Green Alliance(FGA) 대표로 국내 축제의 친환경 전환을 연구·주도",
+          "content_en": "Leads Festival Green Alliance (FGA), Korea's ESG/eco-friendly festival network, researching and driving the industry's environmental transition"
+        }
+      ]
+    },
+    {
+      "title": "지역에 남을 유산을 고민하는 기획 철학",
+      "title_en": "A Planning Philosophy Focused on Lasting Local Legacy",
+      "items": [
+        {
+          "content": "매 축제마다 '지역에 무엇이 남을 것인가'를 먼저 고민하며 전문인력·시민기획자·셰프 양성을 함께 추진",
+          "content_en": "Asks 'what will this leave behind for the community' with every festival, pairing it with training programs for professionals, citizen planners, and chefs"
+        },
+        {
+          "content": "플랫폼형 축제 개발로 민간기업이 참여하는 재원조성 구조를 만들고(한강몽땅), 행정과 긴밀히 협력하는 장기 프로젝트로 관계를 이어감",
+          "content_en": "Builds platform-model festivals that bring in private-sector funding (e.g. Hangang Mongttang) through long-term, closely coordinated partnerships with local government"
+        },
+        {
+          "content": "1회성 이벤트가 아니라 지역경제·지역관광·지역생태계를 살리는 프로젝트로 축제를 기획",
+          "content_en": "Designs festivals as ongoing projects that revive local economies, tourism, and ecosystems — not one-off events"
+        }
+      ]
+    }
+  ]
 }

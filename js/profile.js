@@ -19,6 +19,16 @@ function awardBlock(items) {
   `).join("")}</ul>`;
 }
 
+function strengthsBlock(groups) {
+  if (!groups || !groups.length) return `<div class="empty-state">${t("empty_section")}</div>`;
+  return groups.map(g => `
+    <div class="strength-group">
+      <h4>${escapeHtml(tf(g, "title"))}</h4>
+      <ul class="career-list">${(g.items || []).map(i => `<li>${escapeHtml(tf(i, "content"))}</li>`).join("")}</ul>
+    </div>
+  `).join("");
+}
+
 async function renderProfile() {
   const site = await fetchJSON("content/site.json");
   if (site) {
@@ -36,6 +46,7 @@ async function renderProfile() {
   const sections = [
     ["education", "sec_education", eduBlock],
     ["current_positions", "sec_current", listBlock],
+    ["strengths", "sec_strengths", strengthsBlock],
     ["festival_director", "sec_director", listBlock],
     ["event_direction", "sec_direction", listBlock],
     ["consulting_research", "sec_consulting", listBlock],

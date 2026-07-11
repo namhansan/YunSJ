@@ -1,3 +1,101 @@
 {
-  "items": []
+  "items": [
+    {
+      "title": "구미라면축제",
+      "title_en": "Gumi Ramen Festival",
+      "slug": "gumi-ramyun-festival",
+      "category": "director",
+      "brand": "",
+      "period": "2024~2026",
+      "organizer": "구미시",
+      "cover": "images/uploads/profile/poster-gumi-ramyun.png",
+      "summary": "국내 유일 도심 속 라면축제. 8개월의 준비 과정을 거쳐 지역 셰프 15명을 배출하고 3일간 17만 명이 방문한, 경북 최우수축제로 선정된 신생 음식축제입니다.",
+      "summary_en": "Korea's only downtown ramen festival — after 8 months of preparation, it trained 15 local chefs and drew 170,000 visitors over 3 days, earning recognition as a top festival in Gyeongsangbuk-do.",
+      "description": "총괄기획단장(총감독)으로서 푸드디렉터·홍보디렉터 등 기획단을 꾸려 8개월간 치밀하게 준비했습니다. 라면 맛집 하나 없던 구미에서 공고-선발-교육-멘토링 과정을 거쳐 지역 셰프 15명을 라면 셰프로 길러냈고, 중앙일간지 40건·공중파 뉴스 10건 보도되며 2022년 5만 개였던 갓튀긴 라면 판매량을 25만 개로 늘렸습니다. 국내 최초로 도입한 축제 지속가능성 감독제도도 이 축제에 함께 적용하고 있습니다.",
+      "description_en": "As Executive Program Director, he assembled a team including food and PR directors and spent 8 months in careful preparation. Starting from a city with no notable ramen restaurants, a recruit-select-train-mentor process produced 15 local ramen chefs. The festival drew 40 national newspaper features and 10 broadcast news segments, and grew freshly-fried ramen sales from 50,000 to 250,000 units. It also applies Korea's first festival sustainability director system.",
+      "gallery": [],
+      "report_file": "",
+      "featured": true,
+      "order": 100
+    },
+    {
+      "title": "순천만국제정원박람회 가든스테이 쉴랑게",
+      "title_en": "Garden Stay Shillange, Suncheon Bay International Garden Expo",
+      "slug": "suncheon-garden-stay-shillange",
+      "category": "director",
+      "brand": "",
+      "period": "2023",
+      "organizer": "순천시",
+      "cover": "images/uploads/profile/poster-shilange.jpeg",
+      "summary": "순천 최초의 미식관광 프로젝트(사업비 약 70억). 글램핑과 미식을 결합한 가든스테이로, 7개월간 95%의 투숙률을 기록하며 정원박람회 신규 프로젝트 중 가장 큰 성공을 거뒀습니다.",
+      "summary_en": "Suncheon's first culinary tourism project (approx. 7 billion KRW budget), combining glamping with fine dining. It achieved a 95% occupancy rate over 7 months, the most successful of the Garden Expo's new projects.",
+      "description": "총괄PM(총감독)으로서 커피 브랜드 개발, 저녁 만찬·조식 개발을 총괄했습니다. 짱뚱어탕, 꼬막차우더스프, 해산물편백찜 등 지역 특화 메뉴를 2개월간 개발했고, 표준화된 레시피와 밀키트 개발까지 준비했습니다. 1박 55만 원 중 30만 원을 식사에 집중 투자하는 미식 중심의 숙박 상품으로 설계했습니다.",
+      "description_en": "As Executive PM, he oversaw the development of a coffee brand and both dinner and breakfast menus. Over two months his team developed regional signature dishes, and prepared standardized recipes and meal-kit development. The stay was designed around food, dedicating roughly 300,000 of the 550,000 KRW nightly rate to dining.",
+      "gallery": [
+        {
+          "photo": "images/uploads/profile/gallery-shilange-food1.jpeg"
+        },
+        {
+          "photo": "images/uploads/profile/gallery-shilange-glamping.jpeg"
+        }
+      ],
+      "report_file": "",
+      "featured": true,
+      "order": 90
+    },
+    {
+      "title": "세종시 대표축제 '세종축제'",
+      "title_en": "Sejong Festival",
+      "slug": "sejong-festival",
+      "category": "director",
+      "brand": "",
+      "period": "2022~2023",
+      "organizer": "세종시 / 문화체육관광부",
+      "cover": "images/uploads/profile/poster-sejong-festival.jpeg",
+      "summary": "세종시 도심 공원 전체를 축제장으로 만든 대표축제. 중앙공원·호수공원·금강보행교 등 도심 전체를 무대로, 2022~23년 20만 명 이상이 참여했습니다.",
+      "summary_en": "Sejong City's flagship festival, turning the entire downtown park network — Central Park, Lake Park, the Geumgang pedestrian bridge, and more — into a festival venue, with over 200,000 participants in 2022–23.",
+      "description": "총감독으로서 세종시 도심 전체를 아우르는 축제 공간 활용을 기획했고, 2023년 개막행사에서는 주제공연 '고래의 꿈'을 총연출했습니다. 2016년에는 문화체육관광부·세종시가 함께한 '문화의달' 기획단장(총감독)도 맡았습니다.",
+      "description_en": "As Festival Director, he designed a festival that made use of Sejong's entire downtown, and directed the 2023 opening ceremony's featured performance, 'Dream of the Whale.' In 2016 he also served as Program Director for Sejong's 'Culture Month,' held jointly with the Ministry of Culture, Sports and Tourism.",
+      "gallery": [],
+      "report_file": "",
+      "featured": true,
+      "order": 80
+    },
+    {
+      "title": "서울 밤도깨비야시장",
+      "title_en": "Seoul Bamdokkaebi Night Market",
+      "slug": "seoul-bamdokkaebi-night-market",
+      "category": "director",
+      "brand": "",
+      "period": "2015~2021",
+      "organizer": "서울특별시",
+      "cover": "images/uploads/profile/poster-bamdokkaebi.png",
+      "summary": "국내 최초의 본격 관광 야시장이자 국내 최대 마켓형 페스티벌. 서울시 주요 관광명소 4곳에서 연간 180회 이상 동시 개최했고, 연간 400만 명 이상이 방문했습니다.",
+      "summary_en": "Korea's first full-scale tourist night market and its largest market-style festival, held simultaneously at 4 major Seoul landmarks over 180+ times a year, drawing more than 4 million visitors annually.",
+      "description": "2015년 마켓 개발연구 및 시범사업 기획을 시작으로, 2016~2021년 6년간 총감독을 맡았습니다. 매년 약 40억 원(공공:민간 5:5)이 투입되는 서울시 최대 정책사업 브랜드로 키웠으며, 국내 최초로 지속가능성 모니터링을 도입하고 청년 셰프를 양성하는 푸드트럭의 성지로 자리잡았습니다. 7년간 단 1건의 안전사고 없이 운영했습니다.",
+      "description_en": "Beginning with the 2015 market development study and pilot program, he served as Festival Director for 6 years (2016–2021). He grew it into Seoul's largest policy-driven festival brand (an annual budget of roughly 4 billion KRW, split 50/50 public-private), introduced Korea's first sustainability monitoring system, and built it into a proving ground for young food truck chefs — all without a single safety incident in 7 years.",
+      "gallery": [],
+      "report_file": "",
+      "featured": true,
+      "order": 70
+    },
+    {
+      "title": "서울시 한강몽땅 여름축제",
+      "title_en": "Hangang Mongttang Summer Festival",
+      "slug": "hangang-mongttang",
+      "category": "director",
+      "brand": "",
+      "period": "2014~2020",
+      "organizer": "서울특별시 한강사업본부",
+      "cover": "images/uploads/profile/poster-hangang-mongttang.png",
+      "summary": "국내에서 가장 큰 행사장에서 7년간 기획·운영한 서울 대표 여름축제. 한강 11개 공원과 수상공간을 모두 활용했고, 1개월간 1천만 명이 한강공원을 찾았습니다.",
+      "summary_en": "Seoul's flagship summer festival, planned and run for 7 years at Korea's largest venue — spanning all 11 Hangang parks and the river itself, with 10 million visitors to the Hangang parks in a single month.",
+      "description": "총감독으로서 연간 100~120만 명이 참여하는 프로그램을 7년간 인사사고·안전사고 없이 운영했습니다. 플랫폼형 축제 개발로 민간기업이 참여하는 재원조성 구조를 만들었고, 6년간 이어온 '한강축제청년코디네이터' 육성사업을 통해 200명 이상의 청년 문화기획인력을 양성했습니다.",
+      "description_en": "As Festival Director, he ran a program with 1–1.2 million annual participants for 7 years without a single safety incident. He built a platform-model funding structure that brought in private-sector partners, and trained more than 200 young cultural planners through the 6-year 'Hangang Festival Youth Coordinator' program.",
+      "gallery": [],
+      "report_file": "",
+      "featured": true,
+      "order": 60
+    }
+  ]
 }
