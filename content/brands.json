@@ -19,6 +19,26 @@
       "description_en": "Korea's No.1 mobility gourmet director, drawing on experience from over 8,000 food truck events to handle everything from corporate and brand event catering to pop-ups and culinary content planning. Also runs its own food IPs, including 'Monthly Soban' and 'The Road Chef.'",
       "logo": "",
       "url": "https://www.gourmetnomad.kr/"
+    },
+    {
+      "name": "(사)한국문화기획학교",
+      "name_en": "Korea Cultural Planning School",
+      "tagline": "2000년부터 이어온 문화기획자 양성기관",
+      "tagline_en": "Training cultural planners since 2000",
+      "description": "13년간 7대 사업분야(인력양성, 지역축제 기획·컨설팅, 문화정책 평가·연구, 생활문화·마을공동체, 문화공간 운영, 미식·관광 콘텐츠, 자체 네트워크 사업)에서 전국 지자체·재단과 함께해온 문화기획 전문기관입니다. 윤성진이 교장 겸 이사장을 맡고 있습니다.",
+      "description_en": "A cultural planning organization that has worked with local governments and foundations nationwide across 7 business areas — talent training, local festival planning/consulting, cultural policy research, community culture, cultural space operation, gastronomy tourism content, and its own network programs — for over 13 years. Yun Seongjin serves as Dean and Chairman.",
+      "logo": "",
+      "url": "http://cultureplan.kr/"
+    },
+    {
+      "name": "한국축제지원센터",
+      "name_en": "Korea Festival Support Center",
+      "tagline": "축제를 만드는 사람들의 가장 가까운 현장 파트너",
+      "tagline_en": "The closest on-the-ground partner for the people who make festivals",
+      "description": "(사)한국문화기획학교가 운영하는 축제 전문 지원 조직으로, 한 가지 문제에 집중하는 '원포인트 축제 컨설팅', 축제감독 양성과정 '내일의 축제감독', 축제 데이터 아카이브 등을 통해 전국의 축제 현장을 지원합니다.",
+      "description_en": "A festival support organization run by the Korea Cultural Planning School, offering focused 'One-Point Festival Consulting,' the 'Tomorrow's Festival Director' training program, and a festival data archive to support festivals across Korea.",
+      "logo": "",
+      "url": "https://www.festivalsupport.net"
     }
   ]
 }
