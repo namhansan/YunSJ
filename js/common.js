@@ -48,7 +48,31 @@ function initBackToTop() {
   btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 }
 
+function observeReveals(root = document) {
+  const items = root.querySelectorAll(".reveal:not(.reveal-ready)");
+  if (!items.length) return;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(el => el.classList.add("reveal-ready", "in-view"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+  items.forEach((el, i) => {
+    el.classList.add("reveal-ready");
+    el.style.transitionDelay = `${(i % 6) * 70}ms`;
+    io.observe(el);
+  });
+}
+window.observeReveals = observeReveals;
+
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initBackToTop();
+  observeReveals();
 });

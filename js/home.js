@@ -1,7 +1,7 @@
 function projectCardHTML(p) {
   const cover = p.cover ? `<img src="${p.cover}" alt="${escapeHtml(tf(p, "title"))}">` : "";
   return `
-    <a class="project-card" href="project.html?id=${encodeURIComponent(p.slug)}">
+    <a class="project-card reveal" href="project.html?id=${encodeURIComponent(p.slug)}">
       <div class="thumb">${cover}</div>
       <div class="body">
         <div class="cat-row">
@@ -19,7 +19,7 @@ function brandCardHTML(b) {
   const visit = b.url ? `<a class="btn outline small" href="${b.url}" target="_blank" rel="noopener">${t("brand_visit")}</a>` : "";
   const related = `<a class="btn outline small" href="projects.html?brand=${encodeURIComponent(b.name)}">${t("brand_related")}</a>`;
   return `
-    <div class="brand-card">
+    <div class="brand-card reveal">
       <div class="brand-logo">${logo}</div>
       <h3>${escapeHtml(tf(b, "name"))}</h3>
       ${tf(b, "tagline") ? `<div class="brand-tagline">${escapeHtml(tf(b, "tagline"))}</div>` : ""}
@@ -74,7 +74,7 @@ function eventCardHTML(e) {
   const catLabel = EVENT_CATEGORY_LABELS[lang][e.category] || "";
   const { href, target, rel } = eventLink(e);
   return `
-    <a class="project-card" href="${href}" target="${target}" ${rel}>
+    <a class="project-card reveal" href="${href}" target="${target}" ${rel}>
       <div class="thumb">${img}${e.status === "past" ? `<span class="status-badge past">${escapeHtml(statusLabel)}</span>` : ""}</div>
       <div class="body">
         <div class="cat-row">
@@ -175,7 +175,49 @@ async function renderBrands() {
   el.innerHTML = items.map(brandCardHTML).join("");
 }
 
+// 히어로 + 각 섹션(.section) 중 실제로 화면에 "보이는" 것만 순서대로 골라
+// 배경을 흰색(band-light)/연회색(band-deep)으로 번갈아 붙인다.
+// 배너·라이브·진행중 행사처럼 켜졌다 꺼졌다 하는 블록이 있어도
+// 항상 인접한 두 블록의 배경이 달라지도록 매번 다시 계산.
+function equalizeSectionBands() {
+  const hero = document.querySelector(".hero");
+  const sections = Array.from(document.querySelectorAll("body > .section, main .section"));
+  const isVisible = (el) => !!el && window.getComputedStyle(el).display !== "none";
+
+  if (hero) {
+    hero.classList.remove("band-light", "band-deep");
+    hero.classList.add("band-light");
+  }
+
+  let deepNext = true; // 히어로 바로 다음에 보이는 섹션은 연회색으로 시작
+  sections.forEach((sec) => {
+    sec.classList.remove("band-light", "band-deep");
+    if (!isVisible(sec)) return; // 숨겨진 섹션은 순서 계산에서 제외
+    sec.classList.add(deepNext ? "band-deep" : "band-light");
+    deepNext = !deepNext;
+  });
+}
+
+let BANNER_TIMER = null;
+function startBannerAutoplay() {
+  clearInterval(BANNER_TIMER);
+  const el = document.querySelector("[data-banner]");
+  if (!el || BANNER_ITEMS.length <= 1 || window.getComputedStyle(el).display === "none") return;
+  const advance = () => {
+    BANNER_INDEX = (BANNER_INDEX + 1) % BANNER_ITEMS.length;
+    renderBannerFrame();
+  };
+  BANNER_TIMER = setInterval(advance, 6000);
+  el.addEventListener("mouseenter", () => clearInterval(BANNER_TIMER));
+  el.addEventListener("mouseleave", () => {
+    clearInterval(BANNER_TIMER);
+    BANNER_TIMER = setInterval(advance, 6000);
+  });
+}
+
 async function renderHome() {
+  equalizeSectionBands(); // 데이터 로드 전 1차 계산 (깜빡임 최소화)
+
   const site = await fetchJSON("content/site.json");
   if (site) {
     applySiteBasics(site);
@@ -203,6 +245,10 @@ async function renderHome() {
     const top = featured.slice(0, 6);
     grid.innerHTML = top.length ? top.map(projectCardHTML).join("") : `<div class="empty-state">${t("empty_projects")}</div>`;
   }
+
+  equalizeSectionBands();
+  observeReveals();
+  startBannerAutoplay();
 }
 
 document.addEventListener("DOMContentLoaded", renderHome);
