@@ -71,8 +71,43 @@ function observeReveals(root = document) {
 }
 window.observeReveals = observeReveals;
 
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  const statusEl = form.querySelector("[data-form-status]");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  const encode = (data) =>
+    Object.keys(data).map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k])).join("&");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    submitBtn.disabled = true;
+    statusEl.textContent = t("contact_form_sending");
+    statusEl.className = "form-status";
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(data),
+    })
+      .then(() => {
+        statusEl.textContent = t("contact_form_success");
+        statusEl.className = "form-status success";
+        form.reset();
+      })
+      .catch(() => {
+        statusEl.textContent = t("contact_form_error");
+        statusEl.className = "form-status error";
+      })
+      .finally(() => { submitBtn.disabled = false; });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initBackToTop();
   observeReveals();
+  initContactForm();
 });

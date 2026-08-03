@@ -303,8 +303,76 @@ img { max-width: 100%; display: block; }
 .contact-item .label { font-size: 12px; color: var(--gray); margin-bottom: 6px; }
 .contact-item .value { font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+/* ---- Contact form ---- */
+.contact-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 780px) { .contact-layout { grid-template-columns: 1fr; } }
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.hp-field { position: absolute; left: -9999px; opacity: 0; }
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+.form-row label { font-size: 13px; font-weight: 600; color: var(--navy-soft); }
+.form-row input, .form-row textarea {
+  font-family: var(--sans); font-size: 15px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--navy);
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-row input:focus, .form-row textarea:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-row textarea { resize: vertical; min-height: 120px; }
+.contact-form .btn { align-self: flex-start; border: none; cursor: pointer; }
+.form-status { font-size: 14px; min-height: 20px; margin: 0; }
+.form-status.success { color: #1a7a4c; }
+.form-status.error { color: #c0392b; }
+.contact-direct {
+  background: var(--cream-deep); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px;
+}
+.contact-direct-label { font-weight: 700; margin-bottom: 16px; }
+.contact-direct-line { display: flex; gap: 10px; font-size: 15px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.contact-direct-line:last-child { border-bottom: none; }
+.contact-direct-tag { color: var(--gray); font-size: 13px; min-width: 44px; }
+
 /* Footer */
 .site-footer { padding: 40px 0; text-align: center; color: var(--gray); font-size: 13px; }
+
+/* ---- Footer v2 ---- */
+.site-footer-v2 { background: var(--navy); color: #cfd6e0; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 64px 0 40px;
+}
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand .brand-link { display: inline-flex; }
+.footer-brand .brand-lockup .brand-full { color: #fff; }
+.footer-desc { color: #9aa5b5; font-size: 14px; margin: 16px 0 18px; max-width: 320px; line-height: 1.6; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a {
+  width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center; color: #cfd6e0;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.footer-social a svg { width: 16px; height: 16px; }
+.footer-social a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.footer-col h4 {
+  color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; margin: 0 0 18px;
+}
+.footer-col { display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
+.footer-col a { color: #cfd6e0; transition: color .2s; }
+.footer-col a:hover { color: var(--accent); }
+.footer-contact-line { color: #cfd6e0; font-size: 14px; }
+.footer-contact-link { color: var(--accent); font-weight: 600; margin-top: 4px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 20px 0;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  font-size: 12.5px; color: #8b95a5;
+}
+.footer-bottom a { color: #8b95a5; }
+.footer-bottom a:hover { color: #cfd6e0; }
 
 /* Project detail */
 .detail-hero { padding: 60px 0 40px; }
@@ -383,7 +451,7 @@ img { max-width: 100%; display: block; }
 .btn.small { padding: 8px 16px; font-size: 13px; }
 
 /* ---- Banner ---- */
-.banner-section { display: none; padding: 0 0 72px; border-bottom: 1px solid var(--line); }
+.banner-section { display: none; padding: 64px 0 72px; border-bottom: 1px solid var(--line); }
 .banner-inner {
   background: var(--navy); color: #fff; border-radius: 16px; overflow: hidden;
   display: grid; grid-template-columns: 1fr 1.3fr; align-items: stretch;

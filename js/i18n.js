@@ -34,6 +34,14 @@ const UI_STRINGS = {
     contact_eyebrow: "CONTACT", contact_title: "문의하기",
     contact_phone: "전화", contact_email: "이메일",
     footer_rights: "All rights reserved.",
+    footer_desc: "축제와 문화기획으로 도시의 이야기를 만듭니다.",
+    footer_menu: "메뉴", footer_related: "관련 사이트", footer_contact: "CONTACT",
+    footer_contact_cta: "문의하기 →", footer_admin: "관리자",
+    contact_form_name: "이름", contact_form_email: "이메일", contact_form_phone: "연락처 (선택)",
+    contact_form_message: "문의 내용", contact_form_submit: "보내기",
+    contact_form_sending: "보내는 중…", contact_form_success: "문의가 잘 접수됐습니다. 빠르게 답변드릴게요.",
+    contact_form_error: "전송에 실패했어요. 잠시 후 다시 시도해 주세요.",
+    contact_direct: "직접 연락도 환영합니다",
     projects_eyebrow: "PROJECTS", projects_title: "전체 프로젝트",
     projects_desc: "카테고리와 브랜드를 선택해서 원하는 프로젝트만 모아볼 수 있습니다.",
     filter_all: "전체", filter_brand_all: "전체 브랜드",
@@ -84,6 +92,14 @@ const UI_STRINGS = {
     contact_eyebrow: "CONTACT", contact_title: "Contact",
     contact_phone: "Phone", contact_email: "Email",
     footer_rights: "All rights reserved.",
+    footer_desc: "Shaping cities through festivals and cultural planning.",
+    footer_menu: "Menu", footer_related: "Related Sites", footer_contact: "CONTACT",
+    footer_contact_cta: "Get in touch →", footer_admin: "Admin",
+    contact_form_name: "Name", contact_form_email: "Email", contact_form_phone: "Phone (optional)",
+    contact_form_message: "Message", contact_form_submit: "Send",
+    contact_form_sending: "Sending…", contact_form_success: "Thanks — your message has been received.",
+    contact_form_error: "Something went wrong. Please try again.",
+    contact_direct: "Feel free to reach out directly",
     projects_eyebrow: "PROJECTS", projects_title: "All Projects",
     projects_desc: "Filter by category or brand to find what you're looking for.",
     filter_all: "All", filter_brand_all: "All brands",
@@ -189,12 +205,13 @@ const SOCIAL_ICONS = {
 };
 
 function renderSocialBar(site) {
-  const el = document.querySelector("[data-social-bar]");
-  if (!el || !site || !site.socials || !site.socials.length) return;
-  el.innerHTML = site.socials.filter(s => s.url).map(s => {
+  const bars = document.querySelectorAll("[data-social-bar]");
+  if (!bars.length || !site || !site.socials || !site.socials.length) return;
+  const html = site.socials.filter(s => s.url).map(s => {
     const icon = SOCIAL_ICONS[s.platform] || SOCIAL_ICONS.default;
     return `<a href="${s.url}" target="_blank" rel="noopener" aria-label="${s.platform}">${icon}</a>`;
   }).join("");
+  bars.forEach(el => el.innerHTML = html);
 }
 
 function applySiteBasics(site) {
@@ -202,6 +219,8 @@ function applySiteBasics(site) {
   document.querySelectorAll("[data-name]").forEach(el => el.textContent = siteDisplayName(site));
   document.querySelectorAll("[data-footer-name]").forEach(el => el.textContent = site.name_footer || "");
   document.querySelectorAll("[data-logo-subtitle]").forEach(el => el.textContent = tf(site, "logo_subtitle"));
+  document.querySelectorAll("[data-phone]").forEach(el => el.textContent = site.phone || "");
+  document.querySelectorAll("[data-email]").forEach(el => el.textContent = site.email || "");
   const calendarOn = site.calendar_enabled !== false;
   document.querySelectorAll("[data-nav-calendar]").forEach(el => el.style.display = calendarOn ? "" : "none");
   renderSocialBar(site);

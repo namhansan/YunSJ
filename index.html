@@ -28,7 +28,6 @@
       <a href="events.html" data-i18n="nav_events">행사</a>
       <a href="calendar.html" data-i18n="nav_calendar" data-nav-calendar>캘린더</a>
       <a href="media.html" data-i18n="nav_media">미디어</a>
-      <a href="index.html#contact" data-i18n="nav_contact">연락처</a>
       <div class="lang-toggle">
         <button data-lang-btn="ko">KO</button>
         <button data-lang-btn="en">EN</button>
@@ -107,21 +106,77 @@
       <div class="section-eyebrow" data-i18n="contact_eyebrow">CONTACT</div>
       <h2 class="section-title" data-i18n="contact_title">문의하기</h2>
     </div>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="label" data-i18n="contact_phone">전화</div>
-        <div class="value" data-phone>-</div>
-      </div>
-      <div class="contact-item">
-        <div class="label" data-i18n="contact_email">이메일</div>
-        <div class="value" data-email>-</div>
+    <div class="contact-layout">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form reveal" id="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp-field"><label>이 항목은 비워두세요: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <label for="cf-name" data-i18n="contact_form_name">이름</label>
+          <input type="text" id="cf-name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-email" data-i18n="contact_form_email">이메일</label>
+          <input type="email" id="cf-email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-phone" data-i18n="contact_form_phone">연락처 (선택)</label>
+          <input type="tel" id="cf-phone" name="phone">
+        </div>
+        <div class="form-row">
+          <label for="cf-message" data-i18n="contact_form_message">문의 내용</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn" data-i18n="contact_form_submit">보내기</button>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+      <div class="contact-direct reveal">
+        <div class="contact-direct-label" data-i18n="contact_direct">직접 연락도 환영합니다</div>
+        <div class="contact-direct-line"><span class="contact-direct-tag" data-i18n="contact_phone">전화</span><span data-phone>-</span></div>
+        <div class="contact-direct-line"><span class="contact-direct-tag" data-i18n="contact_email">이메일</span><span data-email>-</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">© <span id="year"></span> <span data-footer-name style="text-transform:uppercase;">YUN SEONGJIN</span>. <span data-i18n="footer_rights">All rights reserved.</span></div>
+<footer class="site-footer-v2">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand-link" href="index.html">
+        <div class="brand-mark">윤</div>
+        <div class="brand-lockup">
+          <span class="brand-full" data-name>윤성진</span>
+          <span class="brand-sub" data-logo-subtitle>축제총감독 · 문화기획가</span>
+        </div>
+      </a>
+      <p class="footer-desc" data-i18n="footer_desc">축제와 문화기획으로 도시의 이야기를 만듭니다.</p>
+      <div class="social-bar footer-social" data-social-bar></div>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_menu">메뉴</h4>
+      <a href="index.html" data-i18n="nav_home">홈</a>
+      <a href="profile.html" data-i18n="nav_profile">프로필</a>
+      <a href="projects.html" data-i18n="nav_projects">프로젝트</a>
+      <a href="events.html" data-i18n="nav_events">행사</a>
+      <a href="calendar.html" data-i18n="nav_calendar" data-nav-calendar>캘린더</a>
+      <a href="media.html" data-i18n="nav_media">미디어</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_related">관련 사이트</h4>
+      <a href="http://cultureplan.kr/" target="_blank" rel="noopener">한국문화기획학교</a>
+      <a href="https://www.festivalsupport.net" target="_blank" rel="noopener">한국축제지원센터</a>
+      <a href="https://www.gourmetnomad.kr/" target="_blank" rel="noopener">고메노마드</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">CONTACT</h4>
+      <div class="footer-contact-line" data-phone>-</div>
+      <div class="footer-contact-line" data-email>-</div>
+      <a class="footer-contact-link" href="index.html#contact" data-i18n="footer_contact_cta">문의하기 →</a>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">
+    <span>© <span id="year"></span> <span data-footer-name style="text-transform:uppercase;">YUN SEONGJIN</span>. <span data-i18n="footer_rights">All rights reserved.</span></span>
+    <a href="/admin/" class="footer-admin-link" data-i18n="footer_admin">관리자</a>
+  </div>
 </footer>
 
 <script src="js/common.js"></script>
